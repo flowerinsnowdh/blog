@@ -1,0 +1,4 @@
+baseURL = 'https://blog.flowerinsnow.online/'
+languageCode = 'zh-cn'
+title = '冬花ice'
+theme = 'hugo-theme-stack'
