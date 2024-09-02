@@ -34,8 +34,8 @@ math = false
 readingTime = true
 
 [article.license]
-enabled = false
-default = "Licensed under CC BY-NC-SA 4.0"
+enabled = true
+default = "2024 冬花ice，保留所有权利"
 
 ## Widgets
 [[widgets.homepage]]
