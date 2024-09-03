@@ -108,3 +108,33 @@ tags = ["软件安装"]
 * 官方下载：https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.4%2B7/OpenJDK21U-jre_x64_linux_hotspot_21.0.4_7.tar.gz
 * 中国科学技术大学开源软件镜像：https://mirrors.ustc.edu.cn/adoptium/releases/temurin21-binaries/jdk-21.0.4%2B7/OpenJDK21U-jre_x64_linux_hotspot_21.0.4_7.tar.gz
 * sha256sum: `d3affbb011ca6c722948f6345d15eba09bded33f9947d4d67e09723e2518c12a`
+
+# 安装
+大部分以zip和tar.gz结尾的均为绿色软件，解压后可以直接使用
+
+msi 则为安装软件，双击安装即可
+
+# 配置
+## Windows
+找一个地方解压缩，并设置环境变量
+
+1. JAVA_HOME到主目录下
+2. 添加一条Path到bin目录下
+
+例如
+
+新建 `JAVA_HOME` 环境变量，值为`C:\Program Files\Java\jdk-11.0.12.8+0`
+
+编辑 `Path` 环境变量，加一条 `%JAVA_HOME%\bin`
+
+## Linux
+
+找个地方解压缩，并设置环境变量
+
+1. 新建`JAVA_HOME`到主目录下
+2. 加一条`PATH`到`bin`目录下
+
+```shell
+export JAVA_HOME=/usr/local/java/jdk-11.0.12.8+0
+export PATH=$JAVA_HOME/bin:$PATH
+```
