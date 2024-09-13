@@ -30,14 +30,80 @@ tags = ["软件安装"]
 #### x64
 ##### JDK
 ###### zip
-* 版本：8u422-b05
+* 版本：8.0.422+5
 * 官方下载：https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u422-b05/OpenJDK8U-jdk_x64_windows_hotspot_8u422b05.zip
 * sha256sum: `3dfe7750f599c22cfcd37c98dbec0b88a2e5f0e5cc7e89ba76af2a7d47856dbf`
 
 ###### msi
-* 版本：8u422-b05
+* 版本：8.0.422+5
 * 官方下载：https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u422-b05/OpenJDK8U-jdk_x64_windows_hotspot_8u422b05.msi
 * sha256sum: `9944b308061827c8ad26bedd573eac334c12eaa72c8b7f5ee73a5795e7710204`
+
+##### JRE
+###### zip
+* 版本：8.0.422+5
+* 官方下载：https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u422-b05/OpenJDK8U-jre_x64_windows_hotspot_8u422b05.zip
+* sha256sum: `7ac37757292c85ed00a2cc7a38cc0b82d48b337eddea9c7f71414bc7bf439af0`
+
+###### msi
+* 版本：8.0.422+5
+* 官方下载：https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u422-b05/OpenJDK8U-jre_x64_windows_hotspot_8u422b05.msi
+* sha256sum: `6a53b2e2e0eee6b238d79999e4de2fac70efc03922d48ea6d1007f50e7c11307`
+
+### Linux
+#### x64
+##### JDK
+* 版本：8.0.422+5
+* 官方下载：https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u422-b05/OpenJDK8U-jdk_x64_linux_hotspot_8u422b05.tar.gz
+* sha256sum: `4c6056f6167fae73ace7c3080b78940be5c87d54f5b08894b3517eed1cbb2c06`
+
+##### JRE
+* 版本：8.0.422+5
+* 官方下载：https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u422-b05/OpenJDK8U-jre_x64_linux_hotspot_8u422b05.tar.gz
+* sha256sum: `0ac516cc1eadffb4cd3cfc9736a33d58ea6a396bf85729036c973482f7c063d9`
+
+## 11
+### Windows
+#### x64
+##### JDK
+###### zip
+* 版本：11.0.24+8
+* 官方下载：https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.24%2B8/OpenJDK11U-jdk_x64_windows_hotspot_11.0.24_8.zip
+* 中国科学技术大学开源软件镜像：https://mirrors.ustc.edu.cn/adoptium/releases/temurin11-binaries/jdk-11.0.24%2B8/OpenJDK11U-jdk_x64_windows_hotspot_11.0.24_8.zip
+* sha256sum: `e0181952006f9779551511d1f449ca33269a58b7b8802f001fd4ceeff2fd01f3`
+
+###### msi
+* 版本：11.0.24+8
+* 官方下载：https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.24%2B8/OpenJDK11U-jdk_x64_windows_hotspot_11.0.24_8.msi
+* 中国科学技术大学开源软件镜像：https://mirrors.ustc.edu.cn/adoptium/releases/temurin11-binaries/jdk-11.0.24%2B8/OpenJDK11U-jdk_x64_windows_hotspot_11.0.24_8.msi
+* sha256sum: `c6d15bff637a78d2033cd42c592e47c09fe87e7d028ae7d1fbf591c547848917`
+
+##### JRE
+###### zip
+* 版本：11.0.24+8
+* 官方下载：https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.24%2B8/OpenJDK11U-jre_x64_windows_hotspot_11.0.24_8.zip
+* 中国科学技术大学开源软件镜像：https://mirrors.ustc.edu.cn/adoptium/releases/temurin11-binaries/jdk-11.0.24%2B8/OpenJDK11U-jre_x64_windows_hotspot_11.0.24_8.zip
+* sha256sum: `78e10f7d025898b7dc7436b2bb986570283cca3cb4a654991a4f9671231da536`
+
+###### msi
+* 版本：11.0.24+8
+* 官方下载：https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.24%2B8/OpenJDK11U-jre_x64_windows_hotspot_11.0.24_8.msi
+* 中国科学技术大学开源软件镜像：https://mirrors.ustc.edu.cn/adoptium/releases/temurin11-binaries/jdk-11.0.24%2B8/OpenJDK11U-jre_x64_windows_hotspot_11.0.24_8.msi
+* sha256sum: `da8e0016ee777b9eb4536991ba5e1ca38be049db13239c2f3924f759730fe329`
+
+### Linux
+#### x64
+##### JDK
+* 版本：11.0.24+8
+* 官方下载：https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.24%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.24_8.tar.gz
+* 中国科学技术大学开源软件镜像：https://mirrors.ustc.edu.cn/adoptium/releases/temurin11-binaries/jdk-11.0.24%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.24_8.tar.gz
+* sha256sum: `0e71a01563a5c7b9988a168b0c4ce720a6dff966b3c27bb29d1ded461ff71d0e`
+
+##### JRE
+* 版本：11.0.24+8
+* 官方下载：https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.24%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.24_8.tar.gz
+* 中国科学技术大学开源软件镜像：https://mirrors.ustc.edu.cn/adoptium/releases/temurin11-binaries/jdk-11.0.24%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.24_8.tar.gz
+* sha256sum: `e0c1938093da3780e4494d366a4e6b75584dde8d46a19acea6691ae11df4cda5`
 
 ## 17
 ### Windows
@@ -63,6 +129,18 @@ tags = ["软件安装"]
 * 版本：17.0.12+7
 * 官方下载：https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jre_x64_windows_hotspot_17.0.12_7.msi
 * sha256sum: `62caaa23b88545099612ae77455fe2ac888ad3731ac0758f5cbedad406fd3c6c`
+
+### Linux
+#### x64
+##### JDK
+* 版本：17.0.12+7
+* 官方下载：https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.12_7.tar.gz
+* sha256sum: `9d4dd339bf7e6a9dcba8347661603b74c61ab2a5083ae67bf76da6285da8a778`
+
+##### JRE
+* 版本：17.0.12+7
+* 官方下载：https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jre_x64_linux_hotspot_17.0.12_7.tar.gz
+* sha256sum: `0e8088d7a3a7496faba7ac8787db09dc0264c2bc6f568ea8024fd775a783e13c`
 
 ## 21
 ### Windows
