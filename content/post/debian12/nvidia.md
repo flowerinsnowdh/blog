@@ -1,5 +1,5 @@
 +++
-title = 'Nvidia'
+title = 'Debian 12 上安装 Nvidia显卡驱动'
 date = 2024-09-17T23:10:56+08:00
 draft = false
 categories = ["Debian 12"]
