@@ -2,9 +2,11 @@ name: Test
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - master
   pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
 
 jobs:
   build:
@@ -19,5 +21,5 @@ jobs:
       - name: Build with hugo
         run: |
           git submodule update --init --recursive
-          curl -sL https://github.com/gohugoio/hugo/releases/download/v0.133.1/hugo_extended_0.133.1_linux-amd64.tar.gz | tar -zx -C ../
+          curl -sL https://github.com/gohugoio/hugo/releases/download/v0.134.3/hugo_extended_0.134.3_linux-amd64.tar.gz | tar -zx -C ../
           ../hugo
