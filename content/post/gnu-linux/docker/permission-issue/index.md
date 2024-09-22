@@ -12,8 +12,6 @@ tags = [
 ]
 +++
 
-https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
-
 # 非 root 用户管理 Docker
 ## 问题描述
 Docker 守护进程会绑定一个 Unix socket，默认只允许 root 用户操作
