@@ -16,6 +16,18 @@ tags = [
 ## 问题描述
 Docker 守护进程会绑定一个 Unix socket，默认只允许 root 用户操作
 
+无法访问 Unix socket 的用户调用 Docker 将会出现类似下面的错误
+
+<details open="open">
+
+<summary>console</summary>
+
+```console
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.47/containers/json": dial unix /var/run/docker.sock: connect: permission denied
+```
+
+</details>
+
 ## 注意事项
 ## 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
