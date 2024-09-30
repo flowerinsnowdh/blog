@@ -2,8 +2,14 @@
 title = '为 Docker 配置代理服务器'
 date = 2024-09-18T19:33:02+08:00
 draft = false
-categories = ["GNU/Linux"]
-tags = ["GNU/Linux", "Docker"]
+categories = [
+    'GNU/Linux',
+    'Docker',
+]
+tags = [
+    'GNU/Linux',
+    'Docker',
+]
 +++
 # 为 Docker 配置代理服务器
 Docker 会读取环境变量`http_proxy`与`https_proxy`，前提是在它的环境中
