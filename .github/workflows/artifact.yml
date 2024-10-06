@@ -19,9 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup 7zip
-        run: sudo apt install p7zip-full
-
       - name: Setup hugo
         run: curl -sL https://github.com/gohugoio/hugo/releases/download/v0.134.3/hugo_extended_0.134.3_linux-amd64.tar.gz | tar -zx -C ../
 
