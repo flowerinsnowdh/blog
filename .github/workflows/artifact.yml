@@ -27,10 +27,8 @@ jobs:
           git submodule update --init --recursive
           ../hugo
 
-      - name: Archive
-        run: 7z a artifact.7z public/*
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: artifact
-          path: artifact.7z
+          path: public/*
