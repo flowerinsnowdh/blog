@@ -1,7 +1,7 @@
 +++
 title = 'Bullying'
 date = 2024-10-06T14:32:26+08:00
-draft = true
+draft = false
 categories = ["校园霸凌？"]
 tags = ["日记"]
 +++

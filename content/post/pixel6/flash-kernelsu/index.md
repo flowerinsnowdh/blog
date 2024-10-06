@@ -344,8 +344,8 @@ adb reboot bootloader
 ## 选择
 现在你已经拥有了我们需要的文件，接下来你有两个选择，具体如何选择，请参阅 KernelSU 的文档[安装介绍](https://kernelsu.org/guide/installation.html#introduction)
 
-1. 直接使用 GKI 模式使用 KernelSU，请跳转[GKI 模式](#GKI-模式)
-2. 使用 LKM 模式使用 KernelSU，请跳转[LKM 模式](#LKM-模式)
+1. 直接使用 GKI 模式使用 KernelSU，请跳转[GKI 模式](#gki-模式)
+2. 使用 LKM 模式使用 KernelSU，请跳转[LKM 模式](#lkm-模式)
 
 ## GKI 模式
 ### 刷写映像
