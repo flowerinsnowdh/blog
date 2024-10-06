@@ -1,0 +1,39 @@
+name: 'Test & Artifact'
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup 7zip
+        run: sudo apt install p7zip-full
+
+      - name: Setup hugo
+        run: curl -sL https://github.com/gohugoio/hugo/releases/download/v0.134.3/hugo_extended_0.134.3_linux-amd64.tar.gz | tar -zx -C ../
+
+      - name: Build with hugo
+        run: |
+          git submodule update --init --recursive
+          ../hugo
+
+      - name: Archive
+        run: 7z a artifact.7z public/*
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: artifact.7z
