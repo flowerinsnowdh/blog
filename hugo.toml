@@ -1,4 +1,4 @@
-baseURL = 'https://blog.flowerinsnow.online/'
+baseURL = 'https://blog.flowerinsnow.cn/'
 languageCode = 'zh-cn'
 title = '冬花ice'
 theme = 'hugo-theme-stack'
