@@ -3,11 +3,11 @@ title = '为 Docker 配置代理服务器'
 date = 2024-09-18T19:33:02+08:00
 draft = false
 categories = [
-    'GNU/Linux',
+    'GNU-Linux',
     'Docker',
 ]
 tags = [
-    'GNU/Linux',
+    'GNU-Linux',
     'Docker',
 ]
 +++

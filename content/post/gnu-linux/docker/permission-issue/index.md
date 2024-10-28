@@ -3,11 +3,11 @@ title = '非 root 用户管理 Docker'
 date = 2024-09-22T18:39:58+08:00
 draft = false
 categories = [
-    'GNU/Linux',
+    'GNU-Linux',
     'Docker',
 ]
 tags = [
-    'GNU/Linux',
+    'GNU-Linux',
     'Docker',
 ]
 +++
