@@ -2,8 +2,15 @@
 title = 'Debian 12 安装 Nvidia显卡驱动'
 date = 2024-09-17T23:10:56+08:00
 draft = false
-categories = ["Debian 12"]
-tags = ["Debian 12", "驱动安装"]
+categories = [
+    'GNU-Linux/Debian/Debian12'
+]
+tags = [
+    'GNU-Linux',
+    'Debian',
+    'Debian 12',
+    '驱动安装',
+]
 +++
 # Debian 12 安装 Nvidia显卡驱动
 ## 版权与声明

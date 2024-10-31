@@ -2,8 +2,12 @@
 title = '校园霸凌？'
 date = 2024-10-06T14:32:26+08:00
 draft = false
-categories = ["校园霸凌？"]
-tags = ["日记"]
+categories = [
+    '日记',
+]
+tags = [
+    '日记',
+]
 +++
 
 # 校园霸凌？
