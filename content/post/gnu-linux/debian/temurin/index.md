@@ -6,16 +6,18 @@ draft = false
 categories = [
     'GNU-Linux/Debian',
     '软件安装/APT',
+    'Adoptium Eclipse Temurin',
 ]
 tags = [
     'GNU-Linux',
     'Debian',
     '软件安装',
-    'APT 软件安装'
+    'APT 软件安装',
+    'Adoptium Eclipse Temurin',
 ]
 +++
 
-本文章介绍的是使用 Adoptium 官方仓库利用 APT 安装 Eclipse Temurin，如果您正在寻找下载 Eclipse Temurin 的方法，请参阅[下载 Eclipse Temurin](/p/下载-Eclipse-Temurin)
+本文章介绍的是使用 Adoptium 官方仓库利用 APT 安装 Eclipse Temurin，如果您正在寻找下载 Eclipse Temurin 的方法，请参阅[下载 Eclipse Temurin](/p/下载-eclipse-temurin/)
 
 Eclipse Temurin 是 Adoptium OpenJDK 发行版的名称
 

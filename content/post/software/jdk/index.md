@@ -1,5 +1,6 @@
 +++
 title = '下载 Eclipse Temurin'
+description = 'Eclipse Temurin 是预编译 OpenJDK'
 date = 2024-09-03T21:35:25+08:00
 draft = false
 categories = [
@@ -10,7 +11,7 @@ tags = [
 ]
 +++
 
-本文章介绍的是从 Adoptium 官方网站下载安装版或便携版的 Eclipse Temurin，如果您正在寻找使用 APT 源安装的方法，请参阅[使用 APT 安装 Eclipse Temurin](/p/使用-APT-安装-Eclipse-Temurin)
+本文章介绍的是从 Adoptium 官方网站下载安装版或便携版的 Eclipse Temurin，如果您正在寻找使用 APT 源安装的方法，请参阅[使用 APT 安装 Eclipse Temurin](/p/使用-apt-安装-eclipse-temurin/)
 
 由于[OracleJDK](https://www.flowerinsnow.cn/redirect?to=https://www.oracle.com/java/technologies/)的不再免费，[OpenJDK](https://www.flowerinsnow.cn/redirect?to=https://jdk.java.net/)只提供6个月内的支持，在此不再推荐。
 
