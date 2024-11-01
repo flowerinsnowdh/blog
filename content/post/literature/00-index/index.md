@@ -1,6 +1,6 @@
 +++
 title = "心中的话"
-description = "抽象的精神世界最精彩了"
+description = "喜欢文章，喜欢写文章"
 date = 2024-08-31T20:30:34+08:00
 categories = ["心中的话", "置顶"]
 tags = ["心中的话", "置顶"]
