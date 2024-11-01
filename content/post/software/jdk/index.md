@@ -7,9 +7,9 @@ tags = ["软件安装"]
 +++
 
 
-推荐使用[LTS](https://zh.wikipedia.org/zh-cn/%E9%95%B7%E6%9C%9F%E6%94%AF%E6%8F%B4)版本，目前的4个是Java8、Java11、Java17和Java21
+推荐使用[LTS](https://www.flowerinsnow.cn/redirect?to=https://zh.wikipedia.org/zh-cn/%E9%95%B7%E6%9C%9F%E6%94%AF%E6%8F%B4)版本，目前的4个是Java8、Java11、Java17和Java21
 
-由于[OracleJDK](https://www.oracle.com/java/technologies/)的不再免费，[OpenJDK](https://jdk.java.net/)只提供6个月内的支持，在此不再推荐。
+由于[OracleJDK](https://www.flowerinsnow.cn/redirect?to=https://www.oracle.com/java/technologies/)的不再免费，[OpenJDK](https://www.flowerinsnow.cn/redirect?to=https://jdk.java.net/)只提供6个月内的支持，在此不再推荐。
 
 > 在咨询律师之前，请勿使用 Oracle Java SE 开发工具包 (JDK)。 —— Which Version of JDK Should I Use?
 > 
@@ -18,12 +18,12 @@ tags = ["软件安装"]
 # 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. whichjdk.com：[https://whichjdk.com/](https://whichjdk.com/)
+1. whichjdk.com：[https://whichjdk.com/](https://www.flowerinsnow.cn/redirect?to=https://whichjdk.com/)
 
 如果可能，请尽量阅读上方的原文章来学习
 
 # 下载
-[Latest Releases | Adoptium](https://adoptium.net/temurin/releases/)
+[Latest Releases | Adoptium](https://www.flowerinsnow.cn/redirect?to=https://adoptium.net/temurin/releases/)
 
 ## 8
 ### Windows

@@ -16,23 +16,23 @@ tags = [
 ## 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. Debian官方Wiki：[NvidiaGraphicsDrivers - Debian Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers)
-2. [@Dissolve](https://im.csdn.net/chat/m0_53930581)在CSDN发布的文章：[Debian 12 安装Nvidia驱动及黑屏故障排除（纯保姆级教程）_debian安装nvidia驱动后黑屏-CSDN博客](https://blog.csdn.net/m0_53930581/article/details/139692003)，转载时进行了增删改，感谢大佬的授权
+1. Debian官方Wiki：[NvidiaGraphicsDrivers - Debian Wiki](https://www.flowerinsnow.cn/redirect?to=https://wiki.debian.org/NvidiaGraphicsDrivers)
+2. [@Dissolve](https://www.flowerinsnow.cn/redirect?to=https://im.csdn.net/chat/m0_53930581)在CSDN发布的文章：[Debian 12 安装Nvidia驱动及黑屏故障排除（纯保姆级教程）_debian安装nvidia驱动后黑屏-CSDN博客](https://www.flowerinsnow.cn/redirect?to=https://blog.csdn.net/m0_53930581/article/details/139692003)，转载时进行了增删改，感谢大佬的授权
 
 如果可能，请尽量阅读上方的原文章来学习
 
 ## 注意事项
 ### “非自由”
-> Nvidia Graphics Drivers are partly secret source (closed source/proprietary) software, owned by a for profit corporation and not supported by Debian. For those interested in stronger security and stronger privacy, it is suggested to consider using an alternative to Nvidia Graphics Drivers. Which is both fully libre source (open source) and supported by Debian. Such as [Mesa](https://wiki.debian.org/Mesa).
-> —— [NvidiaGraphicsDrivers - Debian Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers)
+> Nvidia Graphics Drivers are partly secret source (closed source/proprietary) software, owned by a for profit corporation and not supported by Debian. For those interested in stronger security and stronger privacy, it is suggested to consider using an alternative to Nvidia Graphics Drivers. Which is both fully libre source (open source) and supported by Debian. Such as [Mesa](https://www.flowerinsnow.cn/redirect?to=https://wiki.debian.org/Mesa).
+> —— [NvidiaGraphicsDrivers - Debian Wiki](www.flowerinsnow.cn/redirect?to=https://wiki.debian.org/NvidiaGraphicsDrivers)
 
-也就是说Nvidia的驱动程序并非自由和开源，并不受Debian支持的，需要更安全、更强隐私的驱动程序~又爱折腾~的用户可以尝试 [Mesa](https://wiki.debian.org/Mesa) 等替代方法
+也就是说Nvidia的驱动程序并非自由和开源，并不受Debian支持的，需要更安全、更强隐私的驱动程序~又爱折腾~的用户可以尝试 [Mesa](https://www.flowerinsnow.cn/redirect?to=https://wiki.debian.org/Mesa) 等替代方法
 
 ### Debian 12
 本文章是基于 Debian 12 的，请勿在其它版本和操作系统中安装，请根据对应文档（例如Debian其他版本请根据上方的Debian Wiki）操作
 
 ### 支持的设备
-当前文章的安装方法支持[这些Nvidia设备](https://us.download.nvidia.com/XFree86/Linux-x86_64/525.105.17/README/supportedchips.html)（GeForce 600系列及以上），其它设备请根据Wiki文档使用[nouveau](https://nouveau.freedesktop.org/)
+当前文章的安装方法支持[这些Nvidia设备](https://www.flowerinsnow.cn/redirect?to=https://us.download.nvidia.com/XFree86/Linux-x86_64/525.105.17/README/supportedchips.html)（GeForce 600系列及以上），其它设备请根据Wiki文档使用[nouveau](https://www.flowerinsnow.cn/redirect?to=https://nouveau.freedesktop.org/)
 
 ### 下文注释
 在下文代码块中，左上角写着`#`的为需要超级用户身份执行的权限；左上角写着`$`的只需要普通用户既可执行

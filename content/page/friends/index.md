@@ -5,13 +5,13 @@ comments = false
 [[links]]
 title = '友链 | 编程与摄影日记'
 description = '卡姆姬'
-website = 'https://www.carm.cc/'
+website = 'https://www.flowerinsnow.cn/redirect?to=https://www.carm.cc/'
 image = '/avatars/Carm.png'
 
 [[links]]
 title = "Snowball_233's Blog"
 description = '雪球'
-website = 'https://blog.qwq.my/'
+website = 'https://www.flowerinsnow.cn/redirect?to=https://blog.qwq.my/'
 image = '/avatars/Snowball_233.png'
 
 [menu]
