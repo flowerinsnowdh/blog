@@ -6,6 +6,7 @@ comments = false
 title = '友链 | 编程与摄影日记'
 description = '卡姆姬'
 website = 'https://www.carm.cc/'
+image = 'avatars/Carm.png'
 
 [[links]]
 title = "Snowball_233's Blog"
