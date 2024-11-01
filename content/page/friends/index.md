@@ -1,5 +1,6 @@
 +++
 title = '友链'
+comments = false
 
 [[links]]
 title = '友链 | 编程与摄影日记'
@@ -17,7 +18,4 @@ image = '/avatars/Snowball_233.png'
 weight = 101
 [menu.main.params]
 icon = 'link'
-
-[]
-comments = false
 +++
