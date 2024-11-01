@@ -4,10 +4,12 @@ description = 'Eclipse Temurin 是预编译 OpenJDK'
 date = 2024-09-03T21:35:25+08:00
 draft = false
 categories = [
-    '软件安装'
+    '软件安装',
+    'Adoptium Eclipse Temurin',
 ]
 tags = [
-    '软件安装'
+    '软件安装',
+    'Adoptium Eclipse Temurin',
 ]
 +++
 

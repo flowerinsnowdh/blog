@@ -25,12 +25,12 @@ Eclipse Temurin 是 Adoptium OpenJDK 发行版的名称
 ## 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. Aadoptium 的官方文档：[Linux (RPM/DEB/APK) installer packages | Adoptium](https://adoptium.net/installation/linux/)
+1. Aadoptium 的官方文档：[Linux (RPM/DEB/APK) installer packages | Adoptium](https://www.flowerinsnow.cn/redirect?to=https://adoptium.net/installation/linux/)
 
 如果可能，请尽量阅读上方的原文章来学习
 
 ### Debian 12
-本文章是基于 Debian 12 的，理论上对于 Debian 的所有版本以及基于 Debian 开发的 GNU/Linux 发行版都有效，例如 Ubuntu，但是注意仓库 URL 需要正确编辑源文件中与操作系统对应的内容，而不是一味地照抄
+本文章是基于 Debian 12 的，理论上对于 Debian 的所有版本以及基于 Debian 开发的 GNU/Linux 发行版都有效，例如 Ubuntu，但是注意源文件需要正确编辑成与操作系统对应的内容，而不是一味地照抄
 
 ### 下文注释
 在下文代码块中，左上角写着`#`的为需要超级用户身份执行的权限；左上角写着`$`的只需要普通用户既可执行
@@ -47,7 +47,7 @@ Eclipse Temurin 是 Adoptium OpenJDK 发行版的名称
 <summary># bash</summary>
 
 ```shell
-apt install -y wget apt-transport-https gpg
+apt install wget apt-transport-https gpg
 ```
 
 </details>
