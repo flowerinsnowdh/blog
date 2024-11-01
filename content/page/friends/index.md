@@ -1,5 +1,5 @@
 +++
-title = '友链 | 冬花ice的专栏'
+title = '友链'
 comments = false
 
 [[links]]
