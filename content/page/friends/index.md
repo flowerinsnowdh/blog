@@ -1,9 +1,9 @@
 +++
-title = '友链'
+title = '友链 | 冬花ice的专栏'
 comments = false
 
 [[links]]
-title = '友链 | 编程与摄影日记'
+title = '编程与摄影日记'
 description = '卡姆姬'
 website = 'https://www.flowerinsnow.cn/redirect?to=https://www.carm.cc/'
 image = '/img/avatars/Carm.png'
