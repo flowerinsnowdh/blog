@@ -26,7 +26,7 @@ subtitle = "抽象的精神世界最精彩了"
 [sidebar.avatar]
 enabled = true
 local = false
-src = "/avatars/flowerinsnow.png"
+src = "/img/avatars/flowerinsnow.png"
 
 [article]
 headingAnchor = false

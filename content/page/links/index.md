@@ -4,11 +4,11 @@ links:
   - title: GitHub
     description: flowerinsnowdh
     website: https://github.com/flowerinsnowdh
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+    image: /img/logo/github.png
   - title: 哔哩哔哩
     description: 冬花ice
     website: https://space.bilibili.com/295230912
-    image: https://i0.hdslb.com/bfs/static/jinkela/long/images/favicon.ico
+    image: /img/logo/bilibili.png
 menu:
   main: 
     weight: 100
