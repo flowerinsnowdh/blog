@@ -1,5 +1,5 @@
 +++
-title = 'GNU/Linux 下压缩操作'
+title = 'GNU-Linux 下压缩操作'
 date = 2024-11-01T12:19:42+08:00
 draft = false
 categories = [

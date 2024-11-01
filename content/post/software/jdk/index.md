@@ -1,19 +1,25 @@
 +++
-title = 'JDK'
+title = '下载 Eclipse Temurin'
 date = 2024-09-03T21:35:25+08:00
 draft = false
-categories = ["软件安装"]
-tags = ["软件安装"]
+categories = [
+    '软件安装'
+]
+tags = [
+    '软件安装'
+]
 +++
 
-
-推荐使用[LTS](https://www.flowerinsnow.cn/redirect?to=https://zh.wikipedia.org/zh-cn/%E9%95%B7%E6%9C%9F%E6%94%AF%E6%8F%B4)版本，目前的4个是Java8、Java11、Java17和Java21
+本文章介绍的是从 Adoptium 官方网站下载安装版或便携版的 Eclipse Temurin，如果您正在寻找使用 APT 源安装的方法，请参阅[使用 APT 安装 Eclipse Temurin](/p/使用-APT-安装-Eclipse-Temurin)
 
 由于[OracleJDK](https://www.flowerinsnow.cn/redirect?to=https://www.oracle.com/java/technologies/)的不再免费，[OpenJDK](https://www.flowerinsnow.cn/redirect?to=https://jdk.java.net/)只提供6个月内的支持，在此不再推荐。
 
 > 在咨询律师之前，请勿使用 Oracle Java SE 开发工具包 (JDK)。 —— Which Version of JDK Should I Use?
+>
 > 
-如果你是个人开发者而非企业开发者，这里强烈推荐Eclipse的Adoptium Eclipse Temurin，自由软件精神！
+如果你是个人开发者而非企业开发者，这里强烈推荐 Adoptium 的 Eclipse Temurin，自由软件精神！
+
+推荐使用[LTS](https://www.flowerinsnow.cn/redirect?to=https://zh.wikipedia.org/zh-cn/%E9%95%B7%E6%9C%9F%E6%94%AF%E6%8F%B4)版本，目前的4个是 Java8、Java11、Java17 和 Java21
 
 # 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
@@ -194,25 +200,36 @@ msi 则为安装软件，双击安装即可
 
 # 配置
 ## Windows
+如果您下载的是 .msi 版本，那么就是安装版本，可以根据向导来，否则是便携版本，请继续往下参阅
+
+### 便携版本
 找一个地方解压缩，并设置环境变量
 
-1. JAVA_HOME到主目录下
-2. 添加一条Path到bin目录下
+1. 添加一个环境变量 `JAVA_HOME` 到安装目录下
+2. 编辑 `Path` 环境变量，添加一个条目，内容填写安装目录下的 bin 目录，可以指定为 `JAVA_HOME\bin\`
 
 例如
 
-新建 `JAVA_HOME` 环境变量，值为`C:\Program Files\Java\jdk-11.0.12.8+0`
+新建 `JAVA_HOME` 环境变量，值为`C:\Program Files\Java\jdk-11.0.12.8+0\`
 
-编辑 `Path` 环境变量，加一条 `%JAVA_HOME%\bin`
+编辑 `Path` 环境变量，加一条 `%JAVA_HOME%\bin\`
 
 ## Linux
 
 找个地方解压缩，并设置环境变量
 
-1. 新建`JAVA_HOME`到主目录下
-2. 加一条`PATH`到`bin`目录下
+1. 添加一个环境变量 `JAVA_HOME` 到安装目录下
+2. 追加 `PATH` 环境变量，添加一个条目，内容填写安装目录下的 bin 目录，可以指定为 `JAVA_HOME\bin\`
+
+可以添加到 `~/.bashrc`（用户脚本）或 `/etc/profile`（系统脚本），每次进入 bash 会自动执行，也可以使用 `source` 命令手动执行
+
+<details open="open">
+
+<summary>~/.bashrc 或 /etc/profile</summary>
 
 ```shell
-export JAVA_HOME=/usr/local/java/jdk-11.0.12.8+0
-export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME=/usr/local/java/jdk-11.0.12.8+0/
+export PATH=$PATH:$JAVA_HOME/bin/
 ```
+
+</details>

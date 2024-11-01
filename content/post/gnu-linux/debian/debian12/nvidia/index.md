@@ -13,6 +13,7 @@ tags = [
 ]
 +++
 # Debian 12 安装 Nvidia显卡驱动
+## 注意事项
 ## 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
@@ -21,7 +22,6 @@ tags = [
 
 如果可能，请尽量阅读上方的原文章来学习
 
-## 注意事项
 ### “非自由”
 > Nvidia Graphics Drivers are partly secret source (closed source/proprietary) software, owned by a for profit corporation and not supported by Debian. For those interested in stronger security and stronger privacy, it is suggested to consider using an alternative to Nvidia Graphics Drivers. Which is both fully libre source (open source) and supported by Debian. Such as [Mesa](https://www.flowerinsnow.cn/redirect?to=https://wiki.debian.org/Mesa).
 > —— [NvidiaGraphicsDrivers - Debian Wiki](www.flowerinsnow.cn/redirect?to=https://wiki.debian.org/NvidiaGraphicsDrivers)
