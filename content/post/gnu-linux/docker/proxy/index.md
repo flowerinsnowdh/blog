@@ -11,8 +11,8 @@ tags = [
     '配置代理'
 ]
 +++
-# 为 Docker 配置代理服务器
-Docker 会读取环境变量`http_proxy`与`https_proxy`，前提是在它的环境中
+
+Docker 会读取环境变量`http_proxy`与`https_proxy`，前提是在它的环境中而不是在一个 bash 中
 
 本文章需要您的 Docker 运行于 systemd，否则，请寻找别的方法
 

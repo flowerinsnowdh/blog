@@ -4,15 +4,13 @@ description = 'Eclipse Temurin 是预编译 OpenJDK'
 date = 2024-11-02T02:44:46+08:00
 draft = false
 categories = [
-    'GNU-Linux/Debian',
-    '软件安装/APT',
+    'GNU-Linux/Debian/APT软件安装',
     'Adoptium Eclipse Temurin',
 ]
 tags = [
     'GNU-Linux',
     'Debian',
-    '软件安装',
-    'APT 软件安装',
+    'APT软件安装',
     'Adoptium Eclipse Temurin',
 ]
 +++
@@ -22,7 +20,7 @@ tags = [
 Eclipse Temurin 是 Adoptium OpenJDK 发行版的名称
 
 ## 注意事项
-## 版权与声明
+### 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
 1. Aadoptium 的官方文档：[Linux (RPM/DEB/APK) installer packages | Adoptium](https://www.flowerinsnow.cn/redirect?to=https://adoptium.net/installation/linux/)
@@ -40,7 +38,7 @@ Eclipse Temurin 是 Adoptium OpenJDK 发行版的名称
 ### 危险
 <p style="color:red">更改 APT 环境可能导致您的服务器宕机、系统崩溃甚至数据丢失，请您提前关闭相应服务，并做好备份，跟着此文章执行产生的一切后果由您亲自承担</p>
 
-## 确保存在必要的软件包
+## 一、确保存在必要的软件包
 
 <details open="open">
 
@@ -52,7 +50,7 @@ apt install wget apt-transport-https gpg
 
 </details>
 
-## 下载 Eclipse Adoptium GPG 密钥
+## 二、下载 Eclipse Adoptium GPG 密钥
 <details open="open">
 
 <summary># bash</summary>
@@ -63,10 +61,16 @@ wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --
 
 </details>
 
-## 配置 Eclipse Adoptium apt 仓库源
-要检查支持的所有版本，请查看 [Index of deb/dists](https://packages.adoptium.net/ui/native/deb/dists/) 列表。
+## 三、配置 Eclipse Adoptium apt 仓库源
+要检查支持的所有 GNU/Linux 发行版，请查看 [Index of deb/dists](https://packages.adoptium.net/ui/native/deb/dists/) 列表。
 
-### 对于 Debian
+请展开对应方案阅读
+
+### Debian
+<details>
+
+<summary>Debian 方案</summary>
+
 <details open="open">
 
 <summary># bash</summary>
@@ -75,37 +79,56 @@ wget -qO - https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --
 echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
 ```
 
-</details>
+</details> <!-- END # bash -->
 
-### 对于Linux Mint（基于 Ubuntu）
-对于 Linux Mint (基于 Ubuntu) 您必须将 `VERSION_CODENAME` 替换为 `UBUNTU_CODENAME`. 
+* 如果您正在使用 Debian 衍生发行版（如 Kali），您可能需要将上文中的`$VERSION_CODENAME`替换成您发行版的代号
+* 您也可以使用镜像服务器，例如[中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn/) 提供了 adoptium 仓库的镜像服务器
 
-<details open="open">
-
-<summary># bash</summary>
-
-```shell
-echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^UBUNTU_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
-```
-
-</details>
-
-### 镜像源
-如果您想使用国内的 Adoptium 镜像 apt 源，[中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn/)是个不错的选择
-
-您只需要将命令中的 `packages.adoptium.net/artifactory/deb` 改为 `mirrors.ustc.edu.cn/adoptium/deb/` 即可，例如
+以下使用[中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn/)镜像服务器
 
 <details open="open">
 
 <summary># bash</summary>
 
 ```shell
-echo "deb https://mirrors.ustc.edu.cn/adoptium/deb/ $(awk -F= '/^UBUNTU_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+echo "deb https://mirrors.ustc.edu.cn/adoptium/deb/ $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
 ```
 
-</details>
+</details> <!-- END # bash -->
 
-Ubuntu 同理
+</details> <!-- END Debian 方案 -->
+
+### Ubuntu
+<details>
+
+<summary>Ubuntu 方案</summary>
+
+<details open="open">
+
+<summary># bash</summary>
+
+```shell
+echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+```
+
+</details> <!-- END # bash -->
+
+* 如果您正在使用 Ubuntu 衍生发行版（如 Linux Mint），您可能需要将上文中的`$VERSION_CODENAME`替换成`$UBUNTU_CODENAME`
+* 您也可以使用镜像服务器，例如[中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn/) 提供了 adoptium 仓库的镜像服务器
+
+以下使用[中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn/)镜像服务器
+
+<details open="open">
+
+<summary># bash</summary>
+
+```shell
+echo "deb https://mirrors.ustc.edu.cn/adoptium/deb/ $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+```
+
+</details> <!-- END # bash -->
+
+</details> <!-- END Debian 方案 -->
 
 <details open="open">
 
