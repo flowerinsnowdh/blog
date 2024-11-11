@@ -14,7 +14,7 @@ tags = [
 ]
 +++
 
-Debian 官方 APT 源讲究稳定，而 Docker APT 讲究最新，所以 Docker 软件包后来不会再出现在 Debian 官方 APT 源上了，所以我们要添加 Docker 源
+Debian 官方 APT 源追求稳定，而 Docker APT 追求更新快，所以 Docker 软件包后来不会再出现在 Debian 官方 APT 源上了，所以我们要添加 Docker 源
 
 ## 注意事项
 ## 版权与声明
@@ -79,7 +79,7 @@ apt install ca-certificates curl
 </details>
 
 ### 2.2. 添加仓库公钥
-为了安全地验证下载文件的完整性和抗敌赖姓，我们需要安装 Docker 仓库的 PGP 公钥
+为了安全地验证下载文件的完整性和抗抵赖性，我们需要安装 Docker 仓库的 PGP 公钥
 
 #### 2.2.1. 创建公钥存储目录
 <details open="open">

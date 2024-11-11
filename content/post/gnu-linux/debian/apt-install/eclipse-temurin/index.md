@@ -23,7 +23,7 @@ Eclipse Temurin 是 Adoptium OpenJDK 发行版的名称
 ### 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. Aadoptium 的官方文档：[Linux (RPM/DEB/APK) installer packages | Adoptium](https://www.flowerinsnow.cn/redirect?to=https://adoptium.net/installation/linux/)
+1. Adoptium 的官方文档：[Linux (RPM/DEB/APK) installer packages | Adoptium](https://www.flowerinsnow.cn/redirect?to=https://adoptium.net/installation/linux/)
 
 如果可能，请尽量阅读上方的原文章来学习
 
@@ -50,7 +50,7 @@ apt install wget apt-transport-https gpg
 
 </details>
 
-## 二、下载 Eclipse Adoptium GPG 密钥
+## 二、下载安装 Eclipse Adoptium GPG 密钥
 <details open="open">
 
 <summary># bash</summary>

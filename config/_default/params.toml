@@ -13,15 +13,14 @@ customText = """
 苏公网安备32050502011681号
 </a>
 """
-#customText = ""
 
 [dateFormat]
-published = "Jan 02, 2006"
-lastUpdated = "Jan 02, 2006 15:04 MST"
+published = '06/01/02 15:04:05 Mon'
+lastUpdated = '06/01/02 15:04:05 Mon'
 
 [sidebar]
-#emoji = "🍥"
-subtitle = "喜欢文章，喜欢写文章"
+# emoji = ''
+subtitle = '喜欢文章，喜欢写文章'
 
 [sidebar.avatar]
 enabled = true
@@ -81,10 +80,10 @@ enabled = true
 [imageProcessing.content]
 enabled = true
 
-## Comments
-# [comments]
-# enabled = false
-# provider = "disqus"
+# Comments
+[comments]
+enabled = true
+provider = "cusdis"
 
 # [comments.disqusjs]
 # shortname = ""
@@ -152,6 +151,6 @@ enabled = true
 # clientID = ""
 # clientSecret = ""
 
-# [comments.cusdis]
-# host = ""
-# id = ""
+[comments.cusdis]
+host = "http://comments.flowerinsnow.cn"
+id = "bc948542-1c2e-49ed-a053-c0ee0d7aa17e"
