@@ -1,6 +1,6 @@
 +++
 title = '校园法治宣传观后感'
-description = '我的观后感就是：看完之后我整个人都怒了'
+description = '我的观后感：看完之后我整个人都怒了'
 date = 2024-11-19T22:45:31+08:00
 draft = false
 categories = [
