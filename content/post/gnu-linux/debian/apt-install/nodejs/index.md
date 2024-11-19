@@ -79,8 +79,6 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/nodes
 
 </details>
 
-* 如果您正在使用 Ubuntu 衍生发行版（如 Linux Mint），您可能需要将上文中的`$VERSION_CODENAME`替换成`$UBUNTU_CODENAME`
-
 ## 四、配置源
 ### 4.1. 配置 N|solid
 <details open="open">
