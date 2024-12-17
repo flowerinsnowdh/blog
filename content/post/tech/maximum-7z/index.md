@@ -53,7 +53,9 @@ Reddit 原文中有写到压缩可能甚至会使用 21GB 的内存
 # 二、执行命令
 按照上面的配置，执行命令应该如下
 
-<details>
+<details open="open">
+
+<summary>$ bash</summary>
 
 ```shell
 7z a <compressed-file>.7z -m0=lzma2 -mx=9 -md=1536m -mfb=273 -ms=on <file1> [file2] [file3]...
@@ -70,3 +72,5 @@ Reddit 原文中有写到压缩可能甚至会使用 21GB 的内存
 - `<file1>`、`[file2]`、`[file3]`、`...` 是需要压缩的文件，请替换成您想要压缩的文件和目录
 
 解压的参数工具会自动读取，所以不需要手动指定
+
+</details>
