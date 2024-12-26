@@ -58,6 +58,51 @@ GnuPG 简称 GPG，是一种命令行工具，具有与其他应用程序轻松�
 
 这也就是为什么数字签名可以具有与纸质签名同等法律效力的原因，它更安全，在需要更高可信度的情况下
 
+## 命令行
+<span style="color: red">在任何时候，你都不应该把口令、密钥等敏感信息直接输入在命令上，包括 echo</span>
+
+类似这样
+
+<details open="open">
+
+<summary>$ bash</summary>
+
+```shell
+echo '-----BEGIN PGP PRIVATE KEY BLOCK-----
+
+lFgEZ20g+RYJKwYBBAHaRw8BAQdAJLAcrQ6ur3MP8GzRnKiY5MgrWIMXkBlUY0Kd
+xr+p1FoAAQDp2EuDDq7C9vhGetLozdrKvFBe8MrpB32VhOGL4X9iTBQLtB1leGFt
+cGxlIDxleGFtcGxlQGV4YW1wbGUubmV0PoiZBBMWCgBBFiEEBgWMZOeTa25Px4Kr
+gRsnziPzz4gFAmdtIPkCGwMFCQABBUcFCwkIBwICIgIGFQoJCAsCBBYCAwECHgcC
+F4AACgkQgRsnziPzz4hyZQD/SGJ6rmri0C1GbUWXpdDAi246z/aI+b7XJHz7YzZf
+mYEBAIxwVyA3vm9GtNgI3bmCuSCDuJLoOlqmxiraE5Q56IoJnF0EZ20g+RIKKwYB
+BAGXVQEFAQEHQGmBKiRDu5E2b4+EdnqUHAHeakV9X+VaganOE1Z5lqtqAwEIBwAA
+/1n96Wz4iI5pn3sFO83isA5KJ6e+D347G73kXu2CBkrQES+IfgQYFgoAJhYhBAYF
+jGTnk2tuT8eCq4EbJ84j88+IBQJnbSD5AhsMBQkAAQVHAAoJEIEbJ84j88+IROAA
+/1EP80PwDBcAFATyYyrmq7E2zyM5/HTKQuMml1cSOMIVAQDkbLpAVXCY7psH6uXw
+vYB985To6u86W9Yp0mWH35ohCg==
+=wUWt
+-----END PGP PRIVATE KEY BLOCK-----' | gpg --import
+```
+
+</details>
+
+### 为什么？
+1. 你在 bash 上执行的内容，会被记录，可以在 `history` 命令中查看，也可以在 `~/.bash_history` 上查看
+2. 你执行的命令语句在运行中可以在 `ps`、`htop` 等进程查看器中看到
+
+### 怎么办
+应该尽可能从文件读取，或使用标准输入流输入
+
+例如，执行单独一条 `gpg --import` 或 `gpg -c` 等命令后，gpg 就会持续等待你将内容输入在控制台（作为标准输入流）上，期间可以换行，直到读取到 EOF 信号为止
+
+等待你粘贴或输入完信息后，向标准输入流发送一个 EOF 信号即可结束，在 Linux 的 Shell 中，它是 Ctrl+D 快捷键
+
+# 安装 GnuPG
+正常情况下，GnuPG 会默认安装在 GNU/Linux 操作系统上，因为它们的软件包管理器通常都会校验签名，没有 GnuPG 作为接口的话，是无法工作的。如果没有安装，可以尝试使用包管理器安装，例如 `apt install gnupg`
+
+在 Windows 下，也有类似 [Gpg4win](https://gpg4win.org/) 的支持，Gpg4win 会同时安装一个图形页面程序，可以让你方便地管理和操作各种内容（例如密钥创建、删除、吊销、加密、解密、签名、验证等）
+
 # 密码算法
 以下是 GnuPG 截至 2.2.40 支持的密码算法
 
