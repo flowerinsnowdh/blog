@@ -135,11 +135,11 @@ GnuPG 简称 GPG，是一种命令行工具，具有与其他应用程序轻松�
     </tr>
     <tr>
         <td><a href="https://en.wikipedia.org/wiki/Triple_DES"><span title="Triple Data Encryption Algorithm">3DES</span></a></td>
-        <td>线性代数</td>
+        <td>3 次 DES 运算</td>
         <td><span style="color: orangered">效率低</span></td>
     </tr>
     <tr>
-        <td><a href="https://en.wikipedia.org/wiki/CAST-128"><span title="CAST-128">3DES</span></a></td>
+        <td><a href="https://en.wikipedia.org/wiki/CAST-128"><span title="CAST-128">CAST5</span></a></td>
         <td>Feistel网络</td>
         <td><span style="color: orangered">效率适中</span></td>
     </tr>
