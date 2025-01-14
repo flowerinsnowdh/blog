@@ -14,6 +14,8 @@ tags = [
 ]
 +++
 
+Redirect: /p/apt-添加第三方仓库/
+
 Debian 官方 APT 源仍然停留在 18.x 版本上，根据官方文档，我们可以通过添加 NodeSource 源安装
 
 ## 注意事项

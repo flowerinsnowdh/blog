@@ -29,6 +29,21 @@ Debian 追求稳定，所以更新通常较慢。为了弥补这一点，部分�
 ### Debian
 本文章是基于 Debian 的，理论上对于 Debian 的所有版本以及基于 Debian 开发的 GNU/Linux 发行版都有效，例如 Ubuntu，但是注意源文件需要正确编辑成与操作系统对应的内容，而不是一味地照抄
 
+### 镜像选择
+下方文档中可能使用不同的镜像服务器，原因就是有些服务器没有相关内容或不是最新
+
+所以我选择的优先级是
+
+1. 是否可用
+2. 是否最新
+3. 非营利
+4. 以我的家庭网络最快
+
+### 下文注释
+在下文代码块中，左上角写着`#`的为需要超级用户身份执行的权限；左上角写着`$`的只需要普通用户既可执行
+
+以下代码只使用`#`和`$`来表示权限等级，不再明文写`sudo`
+
 ## 添加方法
 添加一个第三方仓库通常分为以下几步
 
@@ -231,6 +246,59 @@ echo -e 'Package: *\nPin: release o=nginx\nPin-Priority: 1000' | tee /etc/apt/pr
 ```
 curl https://download.docker.com/linux/debian/gpg | gpg --dearmor | tee /etc/apt/keyrings/docker.gpg > /dev/null
 echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian `lsb_release -cs` stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+</details>
+
+如果需要使用 sudo，请在 tee 命令上使用
+
+### NodeSource
+公钥（装甲）：https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
+
+仓库 URL：https://deb.nodesource.com/node_23.x
+
+硬件架构：`amd64`、`arm64`、`armhf`、`x86_64`
+
+分发版本：`nodistro`
+
+组件类型：`main`
+
+#### 一键部署命令
+<details open="open">
+
+<summary># bash</summary>
+
+```
+curl https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor | tee /etc/apt/keyrings/nodesource.gpg > /dev/null
+echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_23.x `lsb_release -cs` stable" | tee /etc/apt/sources.list.d/nodesource.list > /dev/null
+echo -e 'Package: *\nPin: release o=nodistro\nPin-Priority: 1000' | tee /etc/apt/preferences.d/nodesource > /dev/null
+```
+
+</details>
+
+如果需要使用 sudo，请在 tee 命令上使用
+
+### Eclipse Temurin
+公钥（装甲）：https://packages.adoptium.net/artifactory/api/gpg/key/public
+
+仓库 URL：https://packages.adoptium.net/artifactory/deb
+
+* [南京大学开源镜像站](https://mirrors.nju.edu.cn/) 可用：https://mirrors.nju.edu.cn/adoptium/deb/
+
+硬件架构：`amd64`、`arm64`、`armhf`、`i386`、`ppc64el`、`riscv64`、`s390x`
+
+分发版本：使用 lsb_release
+
+组件类型：`main`
+
+#### 一键部署命令
+<details open="open">
+
+<summary># bash</summary>
+
+```
+curl https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/keyrings/adoptium.gpg > /dev/null
+echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/adoptium.gpg] https://packages.adoptium.net/artifactory/deb `lsb_release -cs` main" | tee /etc/apt/sources.list.d/adoptium.list > /dev/null
 ```
 
 </details>

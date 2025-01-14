@@ -14,6 +14,8 @@ tags = [
 ]
 +++
 
+Redirect: /p/apt-添加第三方仓库/
+
 Debian 官方 APT 源追求稳定，而 Docker APT 追求更新快，所以 Docker 软件包后来不会再出现在 Debian 官方 APT 源上了，所以我们要添加 Docker 源
 
 ## 注意事项
