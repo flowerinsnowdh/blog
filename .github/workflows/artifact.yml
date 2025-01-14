@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup hugo
-        run: curl -sL https://github.com/gohugoio/hugo/releases/download/v0.134.3/hugo_extended_0.134.3_linux-amd64.tar.gz | tar -zx -C ../
+        run: curl -sL https://github.com/gohugoio/hugo/releases/download/v0.140.2/hugo_extended_withdeploy_0.140.2_linux-amd64.tar.gz | tar -zx -C ../
 
       - name: Build with hugo
         run: |
