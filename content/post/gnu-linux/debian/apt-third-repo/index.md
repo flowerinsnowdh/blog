@@ -189,7 +189,7 @@ apt update
 
 ```
 curl https://packages.mozilla.org/apt/repo-signing-key.gpg | gpg --dearmor | tee /etc/apt/keyrings/packages.mozilla.org.gpg > /dev/null
-echo 'deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/packages.mozilla.org.gpg] https://packages.mozilla.org/apt mozilla main' | tee /etc/apt/sources.list.d/mozilla.list > /dev/null
+echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/packages.mozilla.org.gpg] https://packages.mozilla.org/apt mozilla main" | tee /etc/apt/sources.list.d/mozilla.list > /dev/null
 echo -e 'Package: *\nPin: release a=mozilla\nPin-Priority: 1000' | tee /etc/apt/preferences.d/mozilla > /dev/null
 ```
 
