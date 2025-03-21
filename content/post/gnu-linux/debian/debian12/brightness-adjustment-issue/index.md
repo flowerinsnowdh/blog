@@ -75,7 +75,7 @@ nvidia_wmi_ec_backlight
 <summary>/etc/default/grub</summary>
 
 ```plain
-nvidia_wmi_ec_backlight=""
+GRUB_CMDLINE_LINUX=""
 ```
 
 </details>
