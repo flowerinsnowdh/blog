@@ -41,7 +41,9 @@ tags = [
 
 ## 一、创建 CA 私钥和证书
 ### 1.1. 创建私钥
-#### ECC 私钥（推荐）
+二选一
+
+#### ECC 私钥
 <details open="open">
 <summary>$ bash</summary>
 
@@ -49,8 +51,6 @@ tags = [
 openssl ecparam -genkey -name prime256v1 -noout -out ca.key
 ```
 </details>
-
-以上生成了一个 256 位的 ECC 密码
 
 #### RSA 私钥
 <details open="open">
@@ -60,8 +60,6 @@ openssl ecparam -genkey -name prime256v1 -noout -out ca.key
 openssl genrsa -out ca.key 4096
 ```
 </details>
-
-以上生成了一个 4096 位的 RSA 密码
 
 ### 1.2. 创建 CA 证书
 <details open="open">
@@ -89,11 +87,13 @@ openssl req -new -x509 -key ca.key -out ca.crt -days 7300 -subj "/C=AU/ST=full n
 刚刚的操作完成后，会存在以下文件
 
 - `ca.key` <span style="color:red">该文件请确保绝对的私密，确保天底下只有你拥有</span>，否则别人可以拿你的证书来签名
-- `ca.crt` 这是 cA 根证书，可以拿去给客户端安装，安装后客户端即信任该证书颁发机构
+- `ca.crt` 这是 CA 根证书，可以拿去给客户端安装，安装后客户端即信任该证书颁发机构
 
 ## 二、申请证书
 以下为`example.net`签发证书，需要您将变量替换，例如 DNS
 ### 2.1. 创建私钥
+二选一
+
 #### ECC 私钥
 <details open="open">
 <summary>$ bash</summary>
@@ -147,7 +147,7 @@ openssl req -new -key example.net.key -out example.net.csr -subj "/CN=example.ne
 刚刚的操作完成后，会存在以下文件
 
 - `example.net.key` <span style="color:red">该文件请确保绝对的私密，确保天底下只有你拥有</span>，连 CA 都不要递交，别被骗了，CA 不需要私钥就可以进行签名，否则别人可以通过该私钥解密 SSL/TLS 信息
-- `example.net.key` 该文件包含申请证书的信息和公钥，将该文件提交给 CA 让 CA 签名
+- `example.net.csr` 该文件包含申请证书的信息和公钥，将该文件提交给 CA 让 CA 签名
 
 ## 三、签发证书
 现在浏览器增加了对证书的检查，必须是 SAN 证书才能被信任，你必须添加一个**可选名称**（或者叫**备用名称**），它应该被声明为附加信息，否则你的证书仍然会被提示**不安全**
@@ -246,4 +246,4 @@ update-ca-certificates
 </details>
 
 ### Mac
-不知道
+不知道，别问我（生气）
