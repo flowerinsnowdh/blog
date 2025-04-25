@@ -17,7 +17,7 @@ image = '/img/avatars/Snowball_233.png'
 [[links]]
 title = "苏九的个人博客"
 description = '苏九'
-website = 'https://www.flowerinsnow.cn/redirect?to=http://yeoc.cn/'
+website = 'https://www.flowerinsnow.cn/redirect?to=https://www.yeoc.cn/'
 image = '/img/avatars/sujiu.png'
 
 [menu]
