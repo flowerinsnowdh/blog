@@ -1,6 +1,7 @@
 +++
 title = 'APT 添加第三方仓库'
-date = 2025-01-10T11:38:38+08:00
+date = '2025-01-10T11:38:38+08:00'
+lastmod = '2025-04-26T22:11:44+08:00'
 draft = false
 categories = [
     'GNU-Linux/Debian/APT软件安装',

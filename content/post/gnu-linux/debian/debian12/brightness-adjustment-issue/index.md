@@ -21,7 +21,7 @@ tags = [
 ### 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. [@啵啵粆](https://www.flowerinsnow.cn/redirect?to=https://space.bilibili.com/507080160)在B站发布的文章：[Linux双显卡亮度调节失效解决办法 - 哔哩哔哩](https://www.flowerinsnow.cn/redirect?to=https://www.bilibili.com/read/cv24842015/)
+1. [@啵啵粆](https://www.flowerinsnow.cn/redirect?dest=https://space.bilibili.com/507080160)在B站发布的文章：[Linux双显卡亮度调节失效解决办法 - 哔哩哔哩](https://www.flowerinsnow.cn/redirect?dest=https://www.bilibili.com/read/cv24842015/)
 
 如果可能，请尽量阅读上方的原文章来学习
 

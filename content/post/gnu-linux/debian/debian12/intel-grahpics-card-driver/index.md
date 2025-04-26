@@ -17,7 +17,7 @@ tags = [
 ## 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. Debian官方Wiki：[NvidiaGraphicsDrivers - Debian Wiki](https://www.flowerinsnow.cn/redirect?to=https://wiki.debian.org/GraphicsCard#Intel)
+1. Debian官方Wiki：[NvidiaGraphicsDrivers - Debian Wiki](https://wiki.debian.org/GraphicsCard#Intel)
 
 如果可能，请尽量阅读上方的原文章来学习
 

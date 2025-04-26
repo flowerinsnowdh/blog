@@ -21,7 +21,7 @@ Google Pixel 稍微有点不一样，它的压缩方式是 legacy_lz4，GKI 模�
 ### 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. KernelSU 的官方安装文档：[安装 | KernelSU](https://www.flowerinsnow.cn/redirect?to=https://kernelsu.org/guide/installation.html)
+1. KernelSU 的官方安装文档：[安装 | KernelSU](https://kernelsu.org/guide/installation.html)
 
 如果可能，请尽量阅读上方的原文章来学习
 
@@ -44,18 +44,18 @@ Google Pixel 稍微有点不一样，它的压缩方式是 legacy_lz4，GKI 模�
 您需要一台电脑才能完成该操作
 
 ### Android Debug Bridge
-简称 adb，请从 [Android 调试桥 (adb)](https://www.flowerinsnow.cn/redirect?to=https://developer.android.com/studio/command-line/adb) 下载，并添加到环境变量中
+简称 adb，请从 [Android 调试桥 (adb)](https://developer.android.com/studio/command-line/adb) 下载，并添加到环境变量中
 
 不多做解释和教程
 
 ### 驱动程序
 #### Windows
-若使用 Windows，则需要下载安装 USB 驱动程序：[Get the Google USB Driver](https://www.flowerinsnow.cn/redirect?to=https://developer.android.com/studio/run/win-usb)
+若使用 Windows，则需要下载安装 USB 驱动程序：[Get the Google USB Driver](https://developer.android.com/studio/run/win-usb)
 
 请根据官方文档来完成安装操作
 
 #### Unix
-若使用 Linux 或 MacOS，则不需要也不应该下载安装 USB 驱动程序，请参阅[在硬件设备上运行应用](https://www.flowerinsnow.cn/redirect?to=https://developer.android.com/studio/run/device)
+若使用 Linux 或 MacOS，则不需要也不应该下载安装 USB 驱动程序，请参阅[在硬件设备上运行应用](https://developer.android.com/studio/run/device)
 
 ## 解除 bootloader 锁
 ### 解锁 OEM
@@ -90,7 +90,7 @@ fastboot flashing unlock
 
 ## 下载并安装 KernelSU 管理器
 ### 下载 KernelSU 管理器
-[https://github.com/tiann/KernelSU/releases](https://www.flowerinsnow.cn/redirect?to=https://github.com/tiann/KernelSU/releases)
+[https://github.com/tiann/KernelSU/releases](https://github.com/tiann/KernelSU/releases)
 
 下载并安装`KernelSU_<版本>.apk`
 
@@ -137,7 +137,7 @@ adb push Image /data/local/tmp/
 
 ## 获取出厂映像
 ### 下载出厂映像
-从 [Nexus 和 Pixel 设备的出厂映像](https://www.flowerinsnow.cn/redirect?to=https://developers.google.com/android/images) 将出厂映像下载下来，以 Google Pixel 6 的 Android 14 为例
+从 [Nexus 和 Pixel 设备的出厂映像](https://developers.google.com/android/images) 将出厂映像下载下来，以 Google Pixel 6 的 Android 14 为例
 
 <p style="color:blue"><b>提示：</b>如果您是第一次访问该下载站，您可能需要将页面滑到最底端，同意“条款及条件”（即点击“确认”按钮）</p>
 
@@ -186,7 +186,7 @@ adb push boot.img /data/local/tmp/
 我们需要`magiskboot`可执行程序来帮助我们修补`boot.img`
 
 ### 下载 Magisk
-可以从 [Magisk/releases](https://www.flowerinsnow.cn/redirect?to=https://github.com/topjohnwu/Magisk/releases) 下载 .apk 文件
+可以从 [Magisk/releases](https://github.com/topjohnwu/Magisk/releases) 下载 .apk 文件
 
 可以下载正式版（一般命名为`Magisk-<版本>.apk`），也可以下载 Pre release 版（一般命名为`app-release.apk`）
 
@@ -342,7 +342,7 @@ adb reboot bootloader
 </details>
 
 ## 选择
-现在你已经拥有了我们需要的文件，接下来你有两个选择，具体如何选择，请参阅 KernelSU 的文档[安装介绍](https://www.flowerinsnow.cn/redirect?to=https://kernelsu.org/guide/installation.html#introduction)
+现在你已经拥有了我们需要的文件，接下来你有两个选择，具体如何选择，请参阅 KernelSU 的文档[安装介绍](https://kernelsu.org/guide/installation.html#introduction)
 
 1. 直接使用 GKI 模式使用 KernelSU，请跳转[GKI 模式](#gki-模式)
 2. 使用 LKM 模式使用 KernelSU，请跳转[LKM 模式](#lkm-模式)

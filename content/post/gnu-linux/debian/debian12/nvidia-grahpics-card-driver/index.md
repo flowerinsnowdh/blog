@@ -19,7 +19,7 @@ Nvidia 官方不会为 GNU/Linux 系统制作显卡驱动，所以 Debian 官方
 
 ## 注意事项
 ### 1. “非自由”
-> Nvidia Graphics Drivers are partly secret source (closed source/proprietary) software, owned by a for profit corporation and not supported by Debian. For those interested in stronger security and stronger privacy, it is suggested to consider using an alternative to Nvidia Graphics Drivers. Which is both fully libre source (open source) and supported by Debian. Such as [Mesa](https://www.flowerinsnow.cn/redirect?to=https://wiki.debian.org/Mesa).
+> Nvidia Graphics Drivers are partly secret source (closed source/proprietary) software, owned by a for profit corporation and not supported by Debian. For those interested in stronger security and stronger privacy, it is suggested to consider using an alternative to Nvidia Graphics Drivers. Which is both fully libre source (open source) and supported by Debian. Such as [Mesa](https://wiki.debian.org/Mesa).
 > —— [NvidiaGraphicsDrivers - Debian Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers)
 
 也就是说 Nvidia 的专有驱动程序并非自由和开源，并不受 Debian 支持的，需要更安全、更强隐私的驱动程序~又爱折腾~的用户可以尝试 [Mesa](https://wiki.debian.org/Mesa) 等替代方法
@@ -28,7 +28,7 @@ Nvidia 官方不会为 GNU/Linux 系统制作显卡驱动，所以 Debian 官方
 本文章是基于 Debian 12 的，请勿在其它版本和操作系统中安装，请根据对应文档（例如 Debian 其他版本请根据上方的 Debian Wiki）操作
 
 ### 3. 支持的设备
-当前文章的安装方法支持[这些Nvidia设备](https://us.download.nvidia.com/XFree86/Linux-x86_64/525.105.17/README/supportedchips.html)（GeForce 600系列及以上），其它设备请根据 Wiki 文档使用[nouveau](https://www.flowerinsnow.cn/redirect?to=https://nouveau.freedesktop.org/)
+当前文章的安装方法支持[这些Nvidia设备](https://us.download.nvidia.com/XFree86/Linux-x86_64/525.105.17/README/supportedchips.html)（GeForce 600系列及以上），其它设备请根据 Wiki 文档使用[nouveau](https://nouveau.freedesktop.org/)
 
 ### 4. 危险
 <span style="color:red">打驱动有风险，请先备份好您的密钥以及重要文件，跟着此文章执行产生的一切后果由您亲自承担</span>
@@ -257,6 +257,6 @@ echo 'options nvidia NVreg_PreserveVideoMemoryAllocations=1' > /etc/modprobe.d/n
 ## 参考文献
 [1] Debian. NvidiaGraphicsDrivers[EB/OL]. (2025-03-22)[2024-09-17]. https://wiki.debian.org/NvidiaGraphicsDrivers
 
-[2] Dissolve. Debian 12 安装Nvidia驱动及黑屏故障排除（纯保姆级教程）[Z/OL]. (2024-06-14)[2024-09-17]. https://blog.csdn.net/m0_53930581/article/details/139692003
+[2] Dissolve. Debian 12 安装Nvidia驱动及黑屏故障排除（纯保姆级教程）[Z/OL]. (2024-06-14)[2024-09-17]. [https://blog.csdn.net/m0_53930581/article/details/139692003](https://www.flowerinsnow.cn/redirect?dest=https://blog.csdn.net/m0_53930581/article/details/139692003)
 
 [3] MirrorZ Project. Debian 软件仓库镜像使用帮助[EB/OL]. (2025-04-25)[2024-09-17]. https://mirror.nju.edu.cn/mirrorz-help/debian/?mirror=NJU

@@ -9,19 +9,19 @@ weight = 1
 license = '根据 <a href="https://www.gnu.org/licenses/">GPL-3.0 license</a> 授权'
 +++
 
-本项目使用了一些自由软件，应它们的要求，本站所有内容将保持自由软件，并于 [flowerinsnowdh/blog](https://www.flowerinsnow.cn/redirect?to=https://github.com/flowerinsnowdh/blog) 开源
+本项目使用了一些自由软件，应它们的要求，本站所有内容将保持自由软件，并于 [flowerinsnowdh/blog](https://github.com/flowerinsnowdh/blog) 开源
 
 以下是版权和协议信息，感谢你们！
 
 <hr />
 
-This project uses some free software, follow their requirements, all content on this site will keep being free software, and open-souce on [flowerinsnowdh/blog](https://www.flowerinsnow.cn/redirect?to=https://github.com/flowerinsnowdh/blog)
+This project uses some free software, follow their requirements, all content on this site will keep being free software, and open-souce on [flowerinsnowdh/blog](https://github.com/flowerinsnowdh/blog)
 
 The following is the copyright and license information, thank you very much!
 
 <hr />
 
-This project uses the generator [hugo](https://www.flowerinsnow.cn/redirect?to=https://github.com/gohugoio/hugo)
+This project uses the generator [hugo](https://github.com/gohugoio/hugo)
 
 ```text
 Copyright (c) 2015-2024 The Hugo Authors. All rights reserved.
@@ -231,7 +231,7 @@ Copyright (c) 2015-2024 The Hugo Authors. All rights reserved.
 
 <hr/>
 
-This project uses the theme [CaiJimmy/hugo-theme-stack](https://www.flowerinsnow.cn/redirect?to=https://github.com/CaiJimmy/hugo-theme-stack)
+This project uses the theme [CaiJimmy/hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack)
 
 ```text
                     GNU GENERAL PUBLIC LICENSE
@@ -306,7 +306,7 @@ modification follow.
 
                        TERMS AND CONDITIONS
 
-  0. Definitions.
+  1. Definitions.
 
   "This License" refers to version 3 of the GNU General Public License.
 

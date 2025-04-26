@@ -31,7 +31,7 @@ permission denied while trying to connect to the Docker daemon socket at unix://
 ## 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. Docker 官方文档：[Manage Docker as a non-root user](https://www.flowerinsnow.cn/redirect?to=https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+1. Docker 官方文档：[Manage Docker as a non-root user](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 
 如果可能，请尽量阅读上方的原文章来学习
 

@@ -19,7 +19,7 @@ tags = [
 ## 版权与声明
 本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. [Reddit](https://www.flowerinsnow.cn/redirect?to=https://www.reddit.com/) 上的提问 [What is the best configuration to 7zip for maximum compression?](https://www.flowerinsnow.cn/redirect?to=https://www.reddit.com/r/compression/comments/13r5ulj/what_is_the_best_configuration_to_7zip_for/)
+1. [Reddit](https://www.flowerinsnow.cn/redirect?dest=https://www.reddit.com/) 上的提问 [What is the best configuration to 7zip for maximum compression?](https://www.flowerinsnow.cn/redirect?dest=https://www.reddit.com/r/compression/comments/13r5ulj/what_is_the_best_configuration_to_7zip_for/)
 
 如果可能，请尽量阅读上方的原文章来学习
 

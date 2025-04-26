@@ -18,6 +18,6 @@ weight = 2
 
 初中还没毕业的小菜鸟，平时喜欢写一点零碎的东西，靠自己实现那些很小但因为很冷门而没有人实现过的东西，到2024年已经有7年的编程经历了
 
-想要查看我的项目请查看 [我的仓库](https://www.flowerinsnow.cn/redirect?to=https://github.com/flowerinsnowdh?tab=repositories) 以及 [冬花的杂碎开源工具](https://github.com/flowerinsnow-lights-opensource)
+想要查看我的项目请查看 [我的仓库](https://github.com/flowerinsnowdh?tab=repositories) 以及 [冬花的杂碎开源工具](https://github.com/flowerinsnow-lights-opensource)
 
-PGP 公钥：[F885D78F25CD59AE6D3FEAB5976CA342D0A0D2C0](https://www.flowerinsnow.cn/redirect?to=https://keys.openpgp.org/vks/v1/by-fingerprint/F885D78F25CD59AE6D3FEAB5976CA342D0A0D2C0)
+PGP 公钥：[F885D78F25CD59AE6D3FEAB5976CA342D0A0D2C0](https://keys.openpgp.org/vks/v1/by-fingerprint/F885D78F25CD59AE6D3FEAB5976CA342D0A0D2C0)
