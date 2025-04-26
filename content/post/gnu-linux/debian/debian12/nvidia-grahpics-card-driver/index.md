@@ -259,4 +259,4 @@ echo 'options nvidia NVreg_PreserveVideoMemoryAllocations=1' > /etc/modprobe.d/n
 
 [2] Dissolve. Debian 12 安装Nvidia驱动及黑屏故障排除（纯保姆级教程）[Z/OL]. (2024-06-14)[2024-09-17]. https://blog.csdn.net/m0_53930581/article/details/139692003
 
-[3] MirrorZ P. Debian 软件仓库镜像使用帮助[EB/OL]. (2025-04-25)[2024-09-17]. https://mirror.nju.edu.cn/mirrorz-help/debian/?mirror=NJU
+[3] MirrorZ Project. Debian 软件仓库镜像使用帮助[EB/OL]. (2025-04-25)[2024-09-17]. https://mirror.nju.edu.cn/mirrorz-help/debian/?mirror=NJU

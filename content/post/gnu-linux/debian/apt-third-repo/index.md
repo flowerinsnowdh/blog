@@ -17,19 +17,11 @@ APT（**A**dvanced **P**ackage **T**ool）是 Debian 其派生的 Linux 软件�
 Debian 追求稳定，所以更新通常较慢。为了弥补这一点，部分软件的仓库提供了它们自己的仓库服务器来辅助或者直接用来代替官方仓库，使用它们，可以第一时间安装最新的软件
 
 ## 注意事项
-## 版权与声明
-本文部分技术核心取自以下文章，感谢这些文章的作者
 
-1. Debian 的官方文档：[SourcesList](https://wiki.debian.org/SourcesList)
-2. Debian 的官方文档：[AptConfiguration](https://wiki.debian.org/AptConfiguration)
-3. Debian 的官方文档：[Debian 社群契约](https://www.debian.org/social_contract)
-
-如果可能，请尽量阅读上方的原文章来学习
-
-### Debian
+### 1. Debian
 本文章是基于 Debian 的，理论上对于 Debian 的所有版本以及基于 Debian 开发的 GNU/Linux 发行版都有效，例如 Ubuntu，但是注意源文件需要正确编辑成与操作系统对应的内容，而不是一味地照抄
 
-### 镜像选择
+### 2. 镜像选择
 下方文档中可能使用不同的镜像服务器，原因就是有些服务器没有相关内容或不是最新
 
 所以我选择的优先级是
@@ -39,17 +31,8 @@ Debian 追求稳定，所以更新通常较慢。为了弥补这一点，部分�
 3. 非营利
 4. 以我的家庭网络最快
 
-### 下文注释
-在下文代码块中，左上角写着`#`的为需要超级用户身份执行的权限；左上角写着`$`的只需要普通用户既可执行
-
-以下代码只使用`#`和`$`来表示权限等级，不再明文写`sudo`
-
 ## 添加方法
-添加一个第三方仓库通常分为以下几步
-
-[导入仓库 GPG 公钥](#导入仓库-gpg-公钥)
-
-## 导入仓库 GPG 公钥
+### 1. 导入仓库 GPG 公钥
 APT 仓库会提供一个 GPG 公钥，以允许用户使用 APT 工具时自动验证下载内容的完整性，为安全性做最重要的保障。
 
 第三方 APT 仓库的 GPG 公钥通常保存在 `/etc/apt/keyrings/` 下，装甲格式（.asc）和非装甲格式（.gpg）都可以使用
@@ -58,10 +41,10 @@ APT 仓库会提供一个 GPG 公钥，以允许用户使用 APT 工具时自动
 
 <details open="open">
 
-<summary># bash</summary>
+<summary>bash</summary>
 
 ```shell
-curl -o /etc/apt/keyrings/packages.mozilla.org.asc https://packages.mozilla.org/apt/repo-signing-key.gpg
+sudo curl -o /etc/apt/keyrings/packages.mozilla.org.asc https://packages.mozilla.org/apt/repo-signing-key.gpg
 ```
 
 </details>
@@ -70,45 +53,43 @@ curl -o /etc/apt/keyrings/packages.mozilla.org.asc https://packages.mozilla.org/
 
 <details open="open">
 
-<summary># bash</summary>
+<summary>bash</summary>
 
 ```shell
-curl https://packages.mozilla.org/apt/repo-signing-key.gpg | gpg --dearmor | tee /etc/apt/keyrings/packages.mozilla.org.gpg > /dev/null
+curl https://packages.mozilla.org/apt/repo-signing-key.gpg | gpg --dearmor | sudo tee /etc/apt/keyrings/packages.mozilla.org.gpg > /dev/null
 ```
 
 </details>
 
-* 如果要使用 sudo，请将 sudo 加在 `tee` 前
-
 这样就可以直接保存二进制的公钥文件
 
-具体文件名不重要，但必须在 `.list` 文件中正确指定
-
-## 添加源文件
+### 2. 添加源文件
 源文件中保存了仓库 URL 等内容，它们通常使用 `.list` 文件格式来保存
 
 它们的位置位于 `/etc/apt/sources.list.d/`，每一行代表一个源
 
+#### 2.1. 格式
+
 格式分为 4 个部分
 
-### 1. 档案类型（Archive type）
+##### 2.1.1 档案类型（Archive type）
 第一个条目为档案类型
 
 `deb` 表示二进制包，也就是预编译包
 
 `deb-src` 表示源包
 
-使用 `deb` 即可
+通常情况下使用 `deb` 即可，使用 `deb-src` 可能会让速度变慢
 
-### 2. 仓库 URL
+##### 2.1.2 仓库 URL
 第二个条目是仓库 URL
 
-### 3. 分发版本（Distribution）
+##### 2.1.3. 分发版本（Distribution）
 第三个条目是软件包分发版本，用于区分不同的操作系统的发行版
 
 官方仓库通常将发行版代号作为分发版本，第三方仓库也有可能会将它们自己的代号作为分发版本
 
-### 4. 组件类型（Component）
+##### 2.1.4. 组件类型（Component）
 第四个条目是组件类型
 
 官方仓库通常以自由度作为组件类型，例如
@@ -120,7 +101,7 @@ curl https://packages.mozilla.org/apt/repo-signing-key.gpg | gpg --dearmor | tee
 
 第三方仓库也有可能会有它们自己的分类方式
 
-### 例如
+#### 2.2. 例
 
 <details open="open">
 
@@ -134,8 +115,8 @@ deb [arch=amd64 signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://pa
 
 具体文件名不重要，但必须使用 `.list` 作为后缀名
 
-## 配置优先级
-如果包可能与 Debian 官方源冲突，你可能会更倾向于使用软件官方的仓库，这时你就需要为软件官方的仓库源设置更高的优先级。如果不会冲突（如打包到 Debian 官方）则可以跳过
+### 3. 配置优先级
+如果第三方源的包可能与 Debian 官方源冲突，你可能会更倾向于使用软件官方的仓库，这时你就需要为软件官方的仓库源设置更高的优先级。如果不会冲突（如打包到 Debian 官方）则可以跳过
 
 它们通常以文件的形式保存在 `/etc/apt/preferences.d/`
 
@@ -157,7 +138,7 @@ Pin-Priority: 1000
 
 具体文件名不重要
 
-## 更新源
+### 4. 更新源
 <details open="open">
 
 <summary># bash</summary>
@@ -174,7 +155,7 @@ apt update
 
 仓库 URL：https://packages.mozilla.org/apt
 
-* [浙江大学开源软件镜像站](https://mirrors.zju.edu.cn/) 可用：https://mirrors.zju.edu.cn/mozilla/apt
+* [南京大学开源镜像站](https://mirrors.nju.edu.cn/) 可用：https://mirrors.nju.edu.cn/mozilla/apt
 
 硬件架构：`all`、`amd64`、`arm64`、`i386`
 
@@ -185,17 +166,15 @@ apt update
 #### 一键部署命令
 <details open="open">
 
-<summary># bash</summary>
+<summary>bash</summary>
 
 ```
-curl https://packages.mozilla.org/apt/repo-signing-key.gpg | gpg --dearmor | tee /etc/apt/keyrings/packages.mozilla.org.gpg > /dev/null
-echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/packages.mozilla.org.gpg] https://packages.mozilla.org/apt mozilla main" | tee /etc/apt/sources.list.d/mozilla.list > /dev/null
-echo -e 'Package: *\nPin: release a=mozilla\nPin-Priority: 1000' | tee /etc/apt/preferences.d/mozilla > /dev/null
+curl https://packages.mozilla.org/apt/repo-signing-key.gpg | gpg --dearmor | sudo tee /etc/apt/keyrings/packages.mozilla.org.gpg > /dev/null
+echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/packages.mozilla.org.gpg] https://packages.mozilla.org/apt mozilla main" | sudo tee /etc/apt/sources.list.d/mozilla.list > /dev/null
+echo -e 'Package: *\nPin: release a=mozilla\nPin-Priority: 1000' | sudo tee /etc/apt/preferences.d/mozilla > /dev/null
 ```
 
 </details>
-
-如果需要使用 sudo，请在 tee 命令上使用
 
 ### Nginx
 公钥（装甲）：https://nginx.org/keys/nginx_signing.key
@@ -213,24 +192,22 @@ echo -e 'Package: *\nPin: release a=mozilla\nPin-Priority: 1000' | tee /etc/apt/
 #### 一键部署命令
 <details open="open">
 
-<summary># bash</summary>
+<summary>bash</summary>
 
 ```
-curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | tee /etc/apt/keyrings/nginx-archive-keyring.gpg > /dev/null
-echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/debian `lsb_release -cs` nginx" | tee /etc/apt/sources.list.d/nginx.list > /dev/null
-echo -e 'Package: *\nPin: release o=nginx\nPin-Priority: 1000' | tee /etc/apt/preferences.d/nginx > /dev/null
+curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /etc/apt/keyrings/nginx-archive-keyring.gpg > /dev/null
+echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/debian `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list > /dev/null
+echo -e 'Package: *\nPin: release o=nginx\nPin-Priority: 1000' | sudo tee /etc/apt/preferences.d/nginx > /dev/null
 ```
 
 </details>
-
-如果需要使用 sudo，请在 tee 命令上使用
 
 ### Docker
 公钥（装甲）：https://download.docker.com/linux/debian/gpg
 
 仓库 URL：https://download.docker.com/linux/debian
 
-* [中国科学技术大学开源软件镜像](https://mirrors.ustc.edu.cn/) 可用：https://mirrors.ustc.edu.cn/docker-ce/linux/debian/
+* [南京大学开源镜像站](https://mirrors.nju.edu.cn/) 可用：https://mirrors.nju.edu.cn/docker-ce/linux/debian/
 
 硬件架构：`amd64`、`arm64`、`armhf`、`s390x`、`ppc64el`
 
@@ -241,16 +218,14 @@ echo -e 'Package: *\nPin: release o=nginx\nPin-Priority: 1000' | tee /etc/apt/pr
 #### 一键部署命令
 <details open="open">
 
-<summary># bash</summary>
+<summary>bash</summary>
 
 ```
-curl https://download.docker.com/linux/debian/gpg | gpg --dearmor | tee /etc/apt/keyrings/docker.gpg > /dev/null
-echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian `lsb_release -cs` stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+curl https://download.docker.com/linux/debian/gpg | gpg --dearmor | sudo tee /etc/apt/keyrings/docker.gpg > /dev/null
+echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian `lsb_release -cs` stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
 </details>
-
-如果需要使用 sudo，请在 tee 命令上使用
 
 ### NodeSource
 公钥（装甲）：https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key
@@ -266,12 +241,12 @@ echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/docker.g
 #### 一键部署命令
 <details open="open">
 
-<summary># bash</summary>
+<summary>bash</summary>
 
 ```
-curl https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor | tee /etc/apt/keyrings/nodesource.gpg > /dev/null
-echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_23.x `lsb_release -cs` stable" | tee /etc/apt/sources.list.d/nodesource.list > /dev/null
-echo -e 'Package: *\nPin: release o=nodistro\nPin-Priority: 1000' | tee /etc/apt/preferences.d/nodesource > /dev/null
+curl https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/nodesource.gpg > /dev/null
+echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_23.x `lsb_release -cs` stable" | sudo tee /etc/apt/sources.list.d/nodesource.list > /dev/null
+echo -e 'Package: *\nPin: release o=nodistro\nPin-Priority: 1000' | sudo tee /etc/apt/preferences.d/nodesource > /dev/null
 ```
 
 </details>
@@ -294,13 +269,41 @@ echo -e 'Package: *\nPin: release o=nodistro\nPin-Priority: 1000' | tee /etc/apt
 #### 一键部署命令
 <details open="open">
 
-<summary># bash</summary>
+<summary>bash</summary>
 
 ```
-curl https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | tee /etc/apt/keyrings/adoptium.gpg > /dev/null
-echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/adoptium.gpg] https://packages.adoptium.net/artifactory/deb `lsb_release -cs` main" | tee /etc/apt/sources.list.d/adoptium.list > /dev/null
+curl https://packages.adoptium.net/artifactory/api/gpg/key/public | gpg --dearmor | sudo tee /etc/apt/keyrings/adoptium.gpg > /dev/null
+echo "deb [arch=`dpkg --print-architecture` signed-by=/etc/apt/keyrings/adoptium.gpg] https://packages.adoptium.net/artifactory/deb `lsb_release -cs` main" | sudo tee /etc/apt/sources.list.d/adoptium.list > /dev/null
 ```
 
 </details>
 
-如果需要使用 sudo，请在 tee 命令上使用
+### Caddy
+公钥（装甲）：https://dl.cloudsmith.io/public/caddy/stable/gpg.key
+
+仓库 URL：https://dl.cloudsmith.io/public/caddy/stable/deb/debian
+
+硬件架构：`amd64`、`arm64`、`armel`、`armhf`、`armv7l`、`i386`、`ppc64el`、`riscv64`、`s390x`
+
+分发版本：`any-version`
+
+组件类型：`main`
+
+#### 一键部署命令
+<details open="open">
+
+<summary>bash</summary>
+
+```
+curl https://dl.cloudsmith.io/public/caddy/stable/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/caddy-stable-archive-keyring.gpg > /dev/null
+echo 'deb [signed-by=/etc/apt/keyrings/caddy-stable-archive-keyring.gpg] https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version main' | sudo tee /etc/apt/sources.list.d/caddy-stable.list > /dev/null
+```
+
+</details>
+
+## 参考文献
+[1] Debian. SourcesList[EB/OL]. (2025-04-20)[2025-01-10]. https://wiki.debian.org/SourcesList
+
+[2] Debian. AptConfiguration[EB/OL]. (2024-03-14)[2025-01-10]. https://wiki.debian.org/AptConfiguration
+
+[3] Debian. Debian 社群契约[EB/OL]. (2022-10-01)[2025-01-10]. https://www.debian.org/social_contract
