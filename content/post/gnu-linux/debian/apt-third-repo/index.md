@@ -141,10 +141,10 @@ Pin-Priority: 1000
 ### 4. 更新源
 <details open="open">
 
-<summary># bash</summary>
+<summary>bash</summary>
 
 ```shell
-apt update
+sudo apt update
 ```
 
 </details>
