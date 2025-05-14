@@ -2,6 +2,7 @@
 title = 'Debian 上双显卡亮度调节问题'
 description = 'Debian 在有双显卡的情况下，无法调节屏幕亮度'
 date = 2024-11-03T13:13:48+08:00
+lastmod = 2025-05-14T14:15:42+08:00
 draft = false
 categories = [
     'GNU-Linux/Debian/Debian12'
