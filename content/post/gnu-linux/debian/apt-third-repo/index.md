@@ -302,7 +302,7 @@ echo 'deb [signed-by=/etc/apt/keyrings/caddy-stable-archive-keyring.gpg] https:/
 
 </details>
 
-## 参考文献
+## 参考资料
 [1] Debian. SourcesList[EB/OL]. (2025-04-20)[2025-01-10]. https://wiki.debian.org/SourcesList
 
 [2] Debian. AptConfiguration[EB/OL]. (2024-03-14)[2025-01-10]. https://wiki.debian.org/AptConfiguration
