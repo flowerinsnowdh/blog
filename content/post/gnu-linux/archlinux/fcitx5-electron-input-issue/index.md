@@ -23,7 +23,7 @@ tags = [
 ## 一、确定标签配置文件
 以 QQ 为例，我们可以查看它的启动脚本
 
-<details>
+<details open="open">
 
 <summary>/usr/bin/linuxqq</summary>
 
@@ -54,7 +54,7 @@ exec /opt/QQ/qq ${QQ_USER_FLAGS[@]} "$@"
 ## 二、添加标签
 编辑上面的获取的配置文件，如果不存在就创建一个，然后写入下面的内容
 
-<details>
+<details open="open">
 
 <summary>~/.config/qq-flags.conf</summary>
 
