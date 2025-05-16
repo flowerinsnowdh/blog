@@ -1,17 +1,15 @@
 +++
-title = 'Debian 上双显卡亮度调节问题'
-description = 'Debian 在有双显卡的情况下，无法调节屏幕亮度'
+title = '上双显卡亮度调节问题'
+description = 'GNU/Linux 在有双显卡的情况下，无法调节屏幕亮度'
 date = 2024-11-03T13:13:48+08:00
-lastmod = 2025-05-14T14:15:42+08:00
+lastmod = 2025-05-16T17:09:44+08:00
 draft = false
 categories = [
-    'GNU-Linux/Debian/Debian12'
+    'GNU-Linux',
+    '问题解决经验',
 ]
 tags = [
     'GNU-Linux',
-    'Debian',
-    'Debian 12',
-    '驱动安装',
     '问题解决经验',
 ]
 +++
@@ -19,9 +17,6 @@ tags = [
 问题：即使显卡驱动安装完成，也无法调节电脑的亮度（亮度滑块无效）
 
 ## 注意事项
-### Debian 12
-本文章是基于 Debian 12 的，如果您是其他操作系统，可能无法通过此文解决
-
 ### 危险
 <p style="color:red">修改系统关键设置有风险，请先备份好您的密钥以及重要文件，根据此文章执行产生的一切后果由您亲自承担</p>
 
@@ -97,6 +92,8 @@ GRUB_CMDLINE_LINUX="quiet acpi_backlight=native"
 </details>
 
 ## 三、更新 grub
+### 对于 Debian
+Debian 有一条命令 `update-grub`，可以轻松更新 grub
 
 <details open="open">
 
@@ -104,6 +101,19 @@ GRUB_CMDLINE_LINUX="quiet acpi_backlight=native"
 
 ```shell
 sudo update-grub
+```
+
+</details>
+
+### 对于其他发行版
+其他发行版可能就没有该命令，那么可以手动重新生成 grub 配置文件
+
+<details open="open">
+
+<summary>bash</summary>
+
+```shell
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 </details>

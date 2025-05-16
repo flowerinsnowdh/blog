@@ -3,9 +3,8 @@ title = 'NOTICE'
 description = '版权信息与注意事项'
 date = 2024-09-02T13:19:10+08:00
 draft = false
-categories = ["置顶"]
-tags = ["置顶"]
-weight = 1
+categories = ["公告"]
+tags = ["公告"]
 license = '根据 <a href="https://www.gnu.org/licenses/">GPL-3.0 license</a> 授权'
 +++
 
