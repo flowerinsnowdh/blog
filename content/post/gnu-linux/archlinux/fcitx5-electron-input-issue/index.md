@@ -1,7 +1,7 @@
 +++
 title = 'Archlinux 下 Fcitx5 无法在部分应用输入中文的问题'
 date = 2025-05-16T16:52:42+08:00
-lastmod = 2025-05-17T05:17:23+08:00
+lastmod = 2025-05-17T05:32:17+08:00
 draft = false
 categories = [
     'GNU-Linux',
@@ -33,7 +33,7 @@ QT_IM_MODULE=fcitx
 
 您可以通过修改 `/etc/environment`，或软件启动脚本，或软件内部设置实现它
 
-### 例一：启动命令行
+### 例：启动命令行
 您可以在命令前添加它们以添加应用程序的环境变量
 
 <details open="open">
@@ -50,6 +50,7 @@ XMODIFIERS=@im=fcitx GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx your_command_here
 可以为 Electron 应用添加标记来修复这个问题，这个方法同样对 chromium 内核的应用有效
 
 ```
+--enable-features=UseOzonePlatform
 --ozone-platform-hint=wayland
 --enable-wayland-ime
 ```
@@ -95,6 +96,7 @@ exec /opt/QQ/qq ${QQ_USER_FLAGS[@]} "$@"
 <summary>~/.config/qq-flags.conf</summary>
 
 ```
+--enable-features=UseOzonePlatform
 --ozone-platform-hint=wayland
 --enable-wayland-ime
 ```
@@ -103,3 +105,12 @@ exec /opt/QQ/qq ${QQ_USER_FLAGS[@]} "$@"
 
 ### 三、重启应用
 重启应用，问题得到解决
+
+## 参考资料
+[1] Fcitx. FAQ[EB/OL]. (2024-11-22)[2025-05-18]. [https://fcitx-im.org/wiki/FAQ](https://fcitx-im.org/wiki/FAQ)
+
+[2] Fcitx. Using Fcitx 5 on Wayland[EB/OL]. (2025-03-04)[2025-05-18]. [https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland](https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland)
+
+[3] Fcitx. Input method related environment variables[EB/OL]. (2016-02-02)[2025-05-18]. [https://fcitx-im.org/wiki/Input_method_related_environment_variables](https://fcitx-im.org/wiki/Input_method_related_environment_variables)
+
+[4] Lejia Chen. Fcitx input method doesn't work in JetBrains IDEs on Linux[Z/OL]. (2024-11-13)[2025-05-18]. [https://youtrack.jetbrains.com/articles/SUPPORT-A-718/Fcitx-input-method-doesnt-work-in-JetBrains-IDEs-on-Linux](https://www.flowerinsnow.cn/redirect?dest=https://youtrack.jetbrains.com/articles/SUPPORT-A-718/Fcitx-input-method-doesnt-work-in-JetBrains-IDEs-on-Linux)
