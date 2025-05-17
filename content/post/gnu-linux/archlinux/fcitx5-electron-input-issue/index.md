@@ -1,26 +1,62 @@
 +++
-title = 'Archlinux 下 Fcitx5-Rime 在 Electron 软件无法输入切换的问题'
-description = 'Archlinux 在安装了 Fcitx5-Rime 虚拟键盘时无法在类似 QQ、VSCode 等 Electron 软件下输入中文'
+title = 'Archlinux 下 Fcitx5 无法在部分应用输入中文的问题'
 date = 2025-05-16T16:52:42+08:00
+lastmod = 2025-05-17T05:17:23+08:00
 draft = false
 categories = [
     'GNU-Linux',
     'Archlinux',
-    '问题解决经验'
+    '问题解决经验',
+    'Fcitx5',
 ]
 tags = [
     'GNU-Linux',
     'Archlinux',
     '问题解决经验',
+    'Fcitx5',
 ]
 +++
 
-在安装了 Archlinux 并安装了 PlasmaKDE/Wayland、Fcitx5-Rime 虚拟键盘（输入法）后，我又通过 AUR 安装了 QQ、微信、VSCode 等工具，出现了一个问题：不能在它们里面使用 Fcitx5-Rime 输入中文了，下面是解决经验，仅供参考
+在安装了 Archlinux 并安装了 PlasmaKDE/Wayland、Fcitx5 虚拟键盘（输入法）后，我又通过安装了 QQ、微信、VSCode、IntelliJ IDEA、Minecraft 等应用，出现了一个问题：不能在它们里面使用 Fcitx5 输入中文了，下面是解决经验，仅供参考
 
 ## 注意
-本方法适用于 PlasmaKDE/Wayland，理论上来说所有 Electron 软件都支持用下方的方法解决
+本方法适用于 Archlinux/Fcitx5/KDE Plasma/Wayland，并确定您已经配置好了输入法（如配置了虚拟键盘等）
 
-## 一、确定标签配置文件
+## 通用解决方法：添加环境变量
+最好添加三个环境变量，你可以不去理解它们，如果想要理解，请参阅相关文档（可以在[#参考资料](#参考资料)中参阅）
+
+```
+XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+```
+
+您可以通过修改 `/etc/environment`，或软件启动脚本，或软件内部设置实现它
+
+### 例一：启动命令行
+您可以在命令前添加它们以添加应用程序的环境变量
+
+<details open="open">
+
+<summary>bash</summary>
+
+```shell
+XMODIFIERS=@im=fcitx GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx your_command_here
+```
+
+</details>
+
+## 对于 Electron 应用的解决方法
+可以为 Electron 应用添加标记来修复这个问题，这个方法同样对 chromium 内核的应用有效
+
+```
+--ozone-platform-hint=wayland
+--enable-wayland-ime
+```
+
+如果你是 Electron 应用遇到了这个问题，那么可以按照如下步骤添加启动 flags
+
+### 一、确定标签配置文件
 以 QQ 为例，我们可以查看它的启动脚本
 
 <details open="open">
@@ -51,7 +87,7 @@ exec /opt/QQ/qq ${QQ_USER_FLAGS[@]} "$@"
 
 然后提取关键词 `${XDG_CONFIG_HOME}/qq-flags.conf`，这个就是该应用的标签配置文件
 
-## 二、添加标签
+### 二、添加标签
 编辑上面的获取的配置文件，如果不存在就创建一个，然后写入下面的内容
 
 <details open="open">
@@ -65,5 +101,5 @@ exec /opt/QQ/qq ${QQ_USER_FLAGS[@]} "$@"
 
 </details>
 
-## 三、重启应用
+### 三、重启应用
 重启应用，问题得到解决
