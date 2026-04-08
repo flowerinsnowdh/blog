@@ -1,89 +1,79 @@
 # Pages placed under these sections will be shown on homepage and archive page.
-mainSections = ["post"]
+mainSections = [
+    'post',
+]
 # Output page's full content in RSS.
 rssFullContent = true
-favicon = "/favicon.png"
+favicon = 'img/favicon.png'
 
 [footer]
-since = 2024
-customText = """
-<a id="15" href="https://beian.miit.gov.cn/">苏ICP备2023048510号-2</a>&nbsp;
-<a href="https://beian.mps.gov.cn/#/query/webSearch">
-<img style="width:12px;height:14px" src="https://www.flowerinsnow.cn/ico/nismsp.avif" alt="nismsp.avif">
-苏公网安备32050502011681号
-</a>
-"""
+    since = 2024
+    customText = """
+        <a id="15" href="https://beian.miit.gov.cn/">苏ICP备2023048510号-2</a>&nbsp;
+        <a href="https://beian.mps.gov.cn/#/query/webSearch">
+            <img style="width:12px;height:14px" src="https://www.flowerinsnow.cn/ico/nismsp.avif" alt="nismsp.avif">
+            苏公网安备32050502011681号
+        </a>
+    """
 
 [dateFormat]
-published = '06/01/02 15:04:05 Mon'
-lastUpdated = '06/01/02 15:04:05 Mon'
+    published = ':date_full'
+    lastUpdated = ':date_full'
 
 [sidebar]
-# emoji = ''
-subtitle = '让所有灵魂自由栖息'
-
-[sidebar.avatar]
-enabled = true
-local = false
-src = "/img/avatars/flowerinsnow.png"
+    subtitle = '让所有灵魂自由栖息'
+    avatar = 'img/avatars/flowerinsnow.png'
 
 [article]
-headingAnchor = false
-math = false
-readingTime = true
+    headingAnchor = true
+    math = false
+    readingTime = true
 
-[article.license]
-enabled = true
-default = "2024 冬花ice，保留所有权利"
+    [article.license]
+        enabled = true
+        default = '2024 冬花ice，保留所有权利'
 
 ## Widgets
-[[widgets.homepage]]
-type = "search"
+[widgets]
+    [[widgets.homepage]]
+        type = 'search'
 
-[[widgets.homepage]]
-type = "archives"
+    [[widgets.homepage]]
+        type = 'archives'
 
-[widgets.homepage.params]
-limit = 5
+    [[widgets.homepage]]
+        type = 'categories'
 
-[[widgets.homepage]]
-type = "categories"
+    [[widgets.homepage]]
+        type = 'tag-cloud'
 
-[widgets.homepage.params]
-limit = 10
-
-[[widgets.homepage]]
-type = "tag-cloud"
-
-[widgets.homepage.params]
-limit = 10
-
-[[widgets.page]]
-type = "toc"
+    [[widgets.page]]
+        type = 'toc'
 
 # [opengraph.twitter]
 # site = ""
 # card = "summary_large_image"
 
-[defaultImage.opengraph]
-enabled = false
-local = false
-src = ""
+# [defaultImage.opengraph]
+# enabled = false
+# local = false
+# src = ""
 
 [colorScheme]
-toggle = true
-default = "auto"
+    toggle = true
+    default = 'auto'
 
-[imageProcessing.cover]
-enabled = true
+# [imageProcessing]
+#     [imageProcessing.cover]
+#         enabled = true
 
-[imageProcessing.content]
-enabled = true
+# [imageProcessing.content]
+# enabled = true
 
-# Comments
-[comments]
-enabled = true
-provider = "cusdis"
+# # Comments
+# [comments]
+# enabled = true
+# provider = "cusdis"
 
 # [comments.disqusjs]
 # shortname = ""
@@ -151,6 +141,6 @@ provider = "cusdis"
 # clientID = ""
 # clientSecret = ""
 
-[comments.cusdis]
-host = "http://comments.flowerinsnow.cn"
-id = "bc948542-1c2e-49ed-a053-c0ee0d7aa17e"
+# [comments.cusdis]
+# host = "http://comments.flowerinsnow.cn"
+# id = "bc948542-1c2e-49ed-a053-c0ee0d7aa17e"
