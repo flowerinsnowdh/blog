@@ -1,34 +1,36 @@
-name: 'Test & Artifact'
+name: 'Artifact'
 
 on:
   push:
     branches:
-      - master
+      - 'master'
   pull_request:
     branches:
-      - master
+      - 'master'
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: 'ubuntu-latest'
     permissions:
-      contents: read
-      actions: write
+      contents: 'read'
+      actions: 'write'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: 'actions/checkout@v6'
         with:
-          submodules: true
+          submodules: 'recursive'
 
-      - name: Setup hugo
-        run: curl -sL https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_linux-amd64.tar.gz | tar -zx -C ../
+      - name: 'Setup hugo'
+        run: |
+          curl -sL https://github.com/gohugoio/hugo/releases/download/v0.160.0/hugo_extended_withdeploy_0.160.0_linux-amd64.tar.gz | tar -zx -C ../
 
-      - name: Build with hugo
-        run: ../hugo
+      - name: 'Build with hugo'
+        run: |
+          ../hugo
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+      - name: 'Upload artifacts'
+        uses: 'actions/upload-artifact@v6'
         with:
-          name: artifact
-          path: public/*
+          path: |
+            public/*
