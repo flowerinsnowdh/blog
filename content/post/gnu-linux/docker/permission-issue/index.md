@@ -67,7 +67,7 @@ groupadd docker
 <summary># bash</summary>
 
 ```shell
-sudo usermod -aG docker $USER
+usermod -aG docker $USER
 ```
 
 </details>

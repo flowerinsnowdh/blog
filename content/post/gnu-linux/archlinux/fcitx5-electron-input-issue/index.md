@@ -38,7 +38,7 @@ QT_IM_MODULE=fcitx
 
 <details open="open">
 
-<summary>bash</summary>
+<summary>$ bash</summary>
 
 ```shell
 XMODIFIERS=@im=fcitx GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx your_command_here

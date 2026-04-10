@@ -55,11 +55,17 @@ Reddit 原文中有写到压缩可能甚至会使用 21GB 的内存
 
 <details open="open">
 
+<summary>折叠内容</summary>
+
+<details open="open">
+
 <summary>$ bash</summary>
 
 ```shell
 7z a <compressed-file>.7z -m0=lzma2 -mx=9 -md=1536m -mfb=273 -ms=on <file1> [file2] [file3]...
 ```
+
+</details>
 
 其中
 

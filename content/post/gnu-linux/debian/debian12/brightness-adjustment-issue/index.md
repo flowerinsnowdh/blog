@@ -1,15 +1,17 @@
 +++
-title = '上双显卡亮度调节问题'
+title = 'GNU/Linux 上双显卡亮度调节问题'
 description = 'GNU/Linux 在有双显卡的情况下，无法调节屏幕亮度'
 date = 2024-11-03T13:13:48+08:00
-lastmod = 2025-05-16T17:09:44+08:00
+lastmod = 2026-04-10T17:46:03+08:00
 draft = false
 categories = [
     'GNU-Linux',
+    'GRUB',
     '问题解决经验',
 ]
 tags = [
     'GNU-Linux',
+    'GRUB',
     '问题解决经验',
 ]
 +++
@@ -18,13 +20,13 @@ tags = [
 
 ## 注意事项
 ### 危险
-<p style="color:red">修改系统关键设置有风险，请先备份好您的密钥以及重要文件，根据此文章执行产生的一切后果由您亲自承担</p>
+<p style="color:red">修改系统关键配置有风险，请先备份好您的密钥以及重要文件，根据此文章执行产生的一切后果由您亲自承担</p>
 
 ## 一、确认问题是否一致
 
 <details open="open">
 
-<summary>bash</summary>
+<summary>$ bash</summary>
 
 ```shell
 ls /sys/class/backlight/
@@ -51,9 +53,9 @@ nvidia_wmi_ec_backlight
 ## 二、修改亮度调节显卡
 一般来说问题就出在，显示桌面环境的显卡和调节亮度的显卡不一致，所以我们要把调节亮度的显卡改为核显
 
-用你自己的方式编辑文件`/etc/default/grub`
+编辑 GRUB 默认配置文件 `/etc/default/grub`
 
-找到`GRUB_CMDLINE_LINUX`这一行
+找到 `GRUB_CMDLINE_LINUX` 这一行
 
 <details open="open">
 
@@ -67,8 +69,6 @@ GRUB_CMDLINE_LINUX=""
 
 在后面追加一段内容`acpi_backlight=native`
 
-我的这一项是空值，所以只要添加这一段内容既可，效果如下
-
 <details open="open">
 
 <summary>/etc/default/grub</summary>
@@ -79,41 +79,41 @@ GRUB_CMDLINE_LINUX="acpi_backlight=native"
 
 </details>
 
-如果你的这段内容本身有`quiet`等内容，请在原本的内容后追加，例如
+如果你的这段内容本身有 `root=/dev/vgarch/root` 等内容，请在原本的内容后追加一个空格，再加该参数，例如
 
 <details open="open">
 
 <summary>/etc/default/grub</summary>
 
 ```plain
-GRUB_CMDLINE_LINUX="quiet acpi_backlight=native"
+GRUB_CMDLINE_LINUX="root=/dev/vgarch/root acpi_backlight=native"
 ```
 
 </details>
 
-## 三、更新 grub
+## 三、更新 GRUB
 ### 对于 Debian
-Debian 有一条命令 `update-grub`，可以轻松更新 grub
+Debian 有一条命令 `update-grub`，可以轻松更新 GRUB
 
 <details open="open">
 
-<summary>bash</summary>
+<summary># bash</summary>
 
 ```shell
-sudo update-grub
+update-grub
 ```
 
 </details>
 
 ### 对于其他发行版
-其他发行版可能就没有该命令，那么可以手动重新生成 grub 配置文件
+其他发行版可能就没有该命令，那么可以手动重新生成 GRUB 配置文件
 
 <details open="open">
 
-<summary>bash</summary>
+<summary># bash</summary>
 
 ```shell
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 </details>
