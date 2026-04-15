@@ -4,14 +4,14 @@ mainSections = [
 ]
 # Output page's full content in RSS.
 rssFullContent = true
-favicon = 'img/favicon.png'
+favicon = '/favicon.png'
 
 [footer]
     since = 2024
     customText = """
         <a id="15" href="https://beian.miit.gov.cn/">苏ICP备2023048510号-2</a>&nbsp;
         <a href="https://beian.mps.gov.cn/#/query/webSearch">
-            <img style="width:12px;height:14px" src="https://www.flowerinsnow.cn/ico/nismsp.avif" alt="nismsp.avif">
+            <img style="width:12px;height:14px" src="https://static.flowerinsnow.cn/img/ico/nismsp.avif" alt="nismsp.avif">
             苏公网安备32050502011681号
         </a>
     """
@@ -22,7 +22,7 @@ favicon = 'img/favicon.png'
 
 [sidebar]
     subtitle = '让所有灵魂自由栖息'
-    avatar = 'img/avatars/flowerinsnow.png'
+    avatar = 'img/avatar/flowerinsnow.avif'
 
 [article]
     headingAnchor = true
